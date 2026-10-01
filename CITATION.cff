@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "Please cite this software using the metadata below. The DOI is reserved; the Zenodo record is not yet published."
+type: software
+title: "HAMLET: Hand Anthropometric Measurement and Landmark Extraction Tool"
+version: "1.0"
+doi: "10.5281/zenodo.23056922"
+repository-code: "https://github.com/JonAndoniFdez/HAMLET"
+license: GPL-3.0-only
+abstract: >-
+  Desktop application for hand anthropometry from textured 3D hand models,
+  with anatomical landmark detection, interactive review and measurement export.
+  GPL-3.0-only applies to original HAMLET code; bundled third-party components
+  and OpenPose models retain their own terms.
+authors:
+  - family-names: "Fernández-Moyano"
+    given-names: "Jon A."
+    affiliation: "Department of Mechanical Engineering and Construction, Universitat Jaume I"
+    orcid: "https://orcid.org/0000-0002-8242-2834"
+  - family-names: "Gracia-Ibáñez"
+    given-names: "Verónica"
+    affiliation: "Department of Mechanical Engineering and Construction, Universitat Jaume I"
+    orcid: "https://orcid.org/0000-0003-0681-7356"
+  - family-names: "Roda-Sales"
+    given-names: "Alba"
+    affiliation: "Department of Mechanical Engineering and Construction, Universitat Jaume I"
+    orcid: "https://orcid.org/0000-0002-4644-1886"
+  - family-names: "Gonell-Cruz"
+    given-names: "Carlos"
+    affiliation: "Department of Mechanical Engineering and Construction, Universitat Jaume I"
+    orcid: "https://orcid.org/0009-0005-3975-8307"
+keywords:
+  - hand anthropometry
+  - anatomical landmarks
+  - 3D models
+  - biomechanics

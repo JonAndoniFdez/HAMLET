@@ -1,0 +1,37 @@
+HAMLET: Hand Anthropometric Measurement and Landmark Extraction Tool
+
+Copyright (c) 2026 Jon A. Fernández-Moyano, Verónica Gracia-Ibáñez, Alba Roda-Sales, Carlos Gonell-Cruz.
+
+Authors:
+Jon A. Fernández-Moyano
+Verónica Gracia-Ibáñez
+Alba Roda-Sales
+Carlos Gonell-Cruz
+
+Department of Mechanical Engineering and Construction, Universitat Jaume I
+
+The original HAMLET software identified as covered by this notice is free
+software: you can redistribute it and/or modify it under the terms of the
+GNU General Public License version 3 as published by the Free Software Foundation.
+
+HAMLET is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with HAMLET. If not, see <https://www.gnu.org/licenses/>.
+
+SPDX-License-Identifier: GPL-3.0-only
+
+Third-party software, models and other materials retain their own licenses
+and notices. This notice does not relicense them or grant rights beyond
+those provided by their respective rights holders. See THIRD_PARTY_NOTICES.md.
+
+In particular, the OpenPose hand model files are not licensed under HAMLET's
+GPLv3 grant. See openpose/LICENSE and OPENPOSE_MODELS_NOTICE.txt for their
+provenance and applicable terms. This application license does not grant
+commercial-use or redistribution rights to those model files.
+
+Source access and build instructions: see SOURCE_CODE.md.
+Public version: 1.0 (Windows metadata: 1.0.0.0).
+Reserved software DOI: 10.5281/zenodo.23056922 (registration upon publication).

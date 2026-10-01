@@ -1,0 +1,37 @@
+OpenPose hand models included with HAMLET
+
+COMPONENT AND ORIGIN
+The following files originate from the CMU OpenPose project, locally identified
+as version 1.7.0 (CPU release):
+  openpose/models/hand/pose_deploy.prototxt
+  openpose/models/hand/pose_iter_102000.caffemodel
+Project: https://github.com/CMU-Perceptual-Computing-Lab/openpose
+Original terms: openpose/LICENSE (reproduced without alteration).
+Version provenance: openpose/Version.txt.
+
+HAMLET loads these files through OpenCV DNN. The OpenPose executable and runtime
+libraries are not included in this release configuration. The files are not
+authored by the HAMLET team and are not relicensed under HAMLET's GPLv3 grant.
+Rights remain with their respective rights holders.
+
+APPLICABLE TERMS
+The supplied OpenPose license governs these files; this notice does not replace,
+expand or restrict its terms. The project owner intends this bundle for
+noncommercial scientific research. That purpose does not remove any conditions
+of the original license or grant a right to sublicense the models.
+The original license also contains separate third-party notices for Caffe;
+those notices do not replace the OpenPose license.
+
+REDISTRIBUTION STATUS
+The official OpenPose README describes noncommercial redistribution, while
+LICENSE contains restrictions on distribution and third-party access. The
+HAMLET team has requested clarification; no response is recorded in this
+release. Inclusion in this local package and preservation of these notices
+do not establish additional redistribution permission or CMU endorsement.
+
+FILE IDENTIFICATION (SHA-256)
+pose_deploy.prototxt:
+d722796d87f251aadf8eb1af9dca03b3732e8a1d1bb524961a29c8e5073a8251
+pose_iter_102000.caffemodel:
+f313aa5ef031ac91606e1a0383daa14be241a6e1a91c1155283dd28503c79c2d
+These hashes identify the local files; they are not an upstream certification.

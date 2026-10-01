@@ -1,0 +1,20 @@
+# Local dependencies and generated results (root only).
+/blender/
+/openpose/
+/build/
+/dist/
+/output/
+/tmp/
+/.venv/
+/venv/
+/.idea/
+/.vscode/
+__pycache__/
+*.py[cod]
+*.log
+.env
+.env.*
+!.env.example
+Thumbs.db
+.DS_Store
+# Keep src/assets/blender and the original third-party notices in Git.

@@ -1,0 +1,22 @@
+{
+  "application_license_and_assets": {
+    "status": "confirmed",
+    "evidence": "On 2026-09-30 the project owner explicitly corrected ownership: the rights holders are Jon A. Fernández-Moyano, Verónica Gracia-Ibáñez, Alba Roda-Sales and Carlos Gonell-Cruz, not UJI, and instructed application of GPLv3. GPL-3.0-only applied to original code. UJI remains affiliation and intended Zenodo community. This confirmation does not relicense third-party models, institutional marks or other third-party materials."
+  },
+  "openpose_models": {
+    "status": "pending",
+    "evidence": "Models retained by explicit user instruction for noncommercial scientific research. Original LICENSE and version file are preserved unchanged; OPENPOSE_MODELS_NOTICE.txt identifies the exact models and terms without relicensing. README and LICENSE contain conflicting redistribution language; the request sent by the project owner remains unanswered. User instruction and attribution are not recorded as a third-party permission."
+  },
+  "microsoft_runtime": {
+    "status": "confirmed",
+    "evidence": "Project owner confirmed a valid Visual Studio 2022 license on 2026-09-28. Redistribute only unmodified permitted release-runtime files, with Microsoft terms."
+  },
+  "clean_windows_and_real_project_test": {
+    "status": "confirmed",
+    "evidence": "User reported on 2026-09-29 that the previously built HAMLET.zip worked with a real hand on another computer without Blender installed. This records the reported functional test only, not a forensic check of Python/Qt installations or anatomical accuracy. The rebuilt 1.0 executable is separately checked by the automated integration suite."
+  },
+  "release_version_and_public_downloads": {
+    "status": "pending",
+    "evidence": "Release version 1.0 selected by user; Windows metadata 1.0.0.0. On 2026-10-01 user supplied reserved DOI 10.5281/zenodo.23056922. Rebuild and local validation are performed by build_release.ps1. Matching public source download links and source tag/commit remain to be published and verified. No upload or publication performed."
+  }
+}

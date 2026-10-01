@@ -1,0 +1,2 @@
+# Verified release dependency versions; see docs/RELEASE_BUILD.md.
+-r requirements-release.lock.txt
