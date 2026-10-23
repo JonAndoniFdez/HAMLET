@@ -18,11 +18,6 @@ project = Path(SPECPATH).resolve()
 windows = Path(os.environ['WINDIR'])
 os.environ['PATH'] = os.pathsep.join(map(str, [Path(sys.base_prefix), Path(sys.base_prefix) / 'DLLs', windows / 'System32', windows]))
 
-excluded_blender_payload_files = {
-    "blender/generate_markers_template.py",
-}
-
-
 def discover_blender_payload_files() -> list[str]:
     assets_dir = project / "src" / "assets"
     if not assets_dir.exists():
@@ -33,8 +28,7 @@ def discover_blender_payload_files() -> list[str]:
     if blender_scripts_dir.exists():
         for script_path in sorted(blender_scripts_dir.glob("*.py")):
             rel_path = f"blender/{script_path.name}"
-            if rel_path not in excluded_blender_payload_files:
-                files.append(rel_path)
+            files.append(rel_path)
 
     shared_utils = assets_dir / "blender_texture_material_utils.py"
     if shared_utils.exists():
@@ -67,11 +61,21 @@ def build_blender_payload_module() -> Path:
 
 
 generated_dir = build_blender_payload_module()
-build_inputs = [project / 'run_app.py', project / 'HAMLET.spec', project / 'requirements-release.lock.txt',
-                project / 'tools/release_license_files.py', project / 'version_info.txt',
-                project / 'LICENSE.txt', project / 'NOTICE.txt', project / 'CITATION.cff']
+build_inputs = [project / name for name in (
+    'run_app.py', 'HAMLET.spec', 'build_release.ps1', 'requirements.txt',
+    'requirements-release.lock.txt', 'version_info.txt', 'LICENSE.txt', 'THIRD_PARTY_LICENSES.txt',
+    'NOTICE.txt', 'CITATION.cff', 'README.md', 'README_RELEASE.txt',
+    'SOURCE_CODE.md', 'THIRD_PARTY_NOTICES.md', 'OPENPOSE_MODELS_NOTICE.txt',
+    'RELEASE_LEGAL_CHECKLIST.md', 'release-approvals.json', 'docs/README.pdf',
+    'docs/RELEASE_BUILD.md', 'docs/PROJECT_STRUCTURE.md', 'docs/EXTERNAL_RUNTIMES.md',
+    'docs/DEPENDENCY_SOURCES.md', 'third_party_licenses/SOURCE_DOWNLOADS.json',
+)]
 build_inputs += list((project / 'src').rglob('*.py'))
-build_inputs += list((project / 'tools/pyinstaller_hooks').glob('*.py'))
+build_inputs += list((project / 'tools').rglob('*.py'))
+build_inputs += list((project / 'tests').rglob('*.py'))
+build_inputs += [p for p in (project / 'src/assets').rglob('*')
+                 if p.is_file() and '__pycache__' not in p.parts
+                 and p.suffix not in {'.py', '.pyc', '.pyo'}]
 input_manifest = generated_dir / 'build-inputs.json'
 input_manifest.write_text(json.dumps({p.relative_to(project).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
                                      for p in sorted(build_inputs)}, indent=2), encoding='utf-8')
@@ -131,14 +135,16 @@ datas += collect_data_files("vedo")
 
 for legal_file in [
     "LICENSE.txt",
+    "THIRD_PARTY_LICENSES.txt",
     "NOTICE.txt",
     "THIRD_PARTY_NOTICES.md",
-    "RELEASE_LEGAL_CHECKLIST.md",
     "SOURCE_CODE.md",
     "README_RELEASE.txt",
     "CITATION.cff",
     "OPENPOSE_MODELS_NOTICE.txt",
     "docs/README.pdf",
+    "docs/DEPENDENCY_SOURCES.md",
+    "tools/download_dependency_sources.py",
 ]:
     p = project / legal_file
     if p.exists():
@@ -154,8 +160,6 @@ datas += collect_project_tree(
         "*.pyo",
         "blender/*.py",
         "blender_texture_material_utils.py",
-        "scripts/detect_map_worker.py",
-        "scripts/interactive_label_editor.py",
     ],
 )
 
@@ -242,6 +246,10 @@ a = Analysis(
     optimize=0,
 )
 
+# The public portable package uses the familiar README.txt filename.
+a.datas = [('README.txt' if destination == 'README_RELEASE.txt' else destination, source, kind)
+           for destination, source, kind in a.datas]
+
 # Select notices from this build's actual inputs, not a stale audit folder.
 license_collector = runpy.run_path(str(project / "tools" / "release_license_files.py"))
 a.datas += license_collector["collect_license_files"](
@@ -283,8 +291,7 @@ exe = EXE(
     # Evita que todo se meta dentro de _internal
     contents_directory=".",
 
-    # Si quieres añadir icono, puedes activar esta línea:
-    # icon=str(project / "src" / "assets" / "icons" / "uji_icon.ico"),
+    icon=str(project / "src" / "assets" / "icons" / "uji_icon.ico"),
 )
 
 coll = COLLECT(

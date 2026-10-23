@@ -97,9 +97,45 @@ def detect_points_from_texture(
             continue
         cx = int(M["m10"] / M["m00"])
         cy = int(M["m01"] / M["m00"])
-        rows.append({"pixel_x": cx, "pixel_y": cy, "area": area, "contour_id": i})
+        perimeter = float(cv2.arcLength(c, True))
+        circularity = float(np.clip(4.0 * np.pi * area / perimeter**2, 0, 1)) if perimeter else 0.0
+        # Score only original threshold-matching pixels, excluding pixels added
+        # by morphological closing. Average per-pixel distances handles hue wrap.
+        x, y, w, h = cv2.boundingRect(c)
+        region = np.zeros((h, w), np.uint8)
+        cv2.drawContours(region, [c - np.array([[[x, y]]])], -1, 255, -1)
+        pixels = hsv[y:y+h, x:x+w][region > 0].astype(float)
+        color_scores = np.zeros(len(pixels), dtype=float)
+        matched = np.zeros(len(pixels), dtype=bool)
+        for lo, hi in parts:
+            lower, upper = lo.astype(float), hi.astype(float)
+            inside = np.all((pixels >= lower) & (pixels <= upper), axis=1)
+            center = (lower + upper) / 2.0
+            half_width = np.maximum((upper - lower) / 2.0, 1.0)
+            # Reconstruct a range split at the 179/0 hue seam so its
+            # representative colour remains the centre of the full range.
+            for other_lo, other_hi in parts:
+                if not (np.array_equal(lo[1:], other_lo[1:]) and np.array_equal(hi[1:], other_hi[1:])):
+                    continue
+                if lo[0] == 0 and other_hi[0] == 179 and other_lo[0] > hi[0]:
+                    start, end = float(other_lo[0]), float(hi[0]) + 180.0
+                elif hi[0] == 179 and other_lo[0] == 0 and lo[0] > other_hi[0]:
+                    start, end = float(lo[0]), float(other_hi[0]) + 180.0
+                else:
+                    continue
+                center[0] = ((start + end) / 2.0) % 180.0
+                half_width[0] = max((end - start) / 2.0, 1.0)
+                break
+            delta = np.abs(pixels - center)
+            delta[:, 0] = np.minimum(delta[:, 0], 180.0 - delta[:, 0])
+            score = np.clip(1.0 - np.linalg.norm(delta / half_width, axis=1) / np.sqrt(3), 0, 1)
+            color_scores = np.maximum(color_scores, np.where(inside, score, 0.0))
+            matched |= inside
+        color_score = float(color_scores[matched].mean()) if matched.any() else 0.0
+        rows.append({"pixel_x": cx, "pixel_y": cy, "area": area, "contour_id": i,
+                     "circularity": circularity, "color_score": color_score})
 
-    df2d = pd.DataFrame(rows)
+    df2d = pd.DataFrame(rows, columns=["pixel_x", "pixel_y", "area", "contour_id", "circularity", "color_score"])
     return df2d, mask, hsv
 
 
@@ -292,6 +328,9 @@ def build_2d_from_3d(df3d: pd.DataFrame) -> pd.DataFrame:
     df2d["pixel_y"] = pd.to_numeric(df3d.get("pixel_y"), errors="coerce").fillna(0).astype(int) if "pixel_y" in df3d.columns else 0
     df2d["area"] = pd.to_numeric(df3d.get("area"), errors="coerce").fillna(0.0) if "area" in df3d.columns else 0.0
     df2d["contour_id"] = pd.to_numeric(df3d.get("contour_id"), errors="coerce").fillna(-1).astype(int) if "contour_id" in df3d.columns else -1
+    for column in ("circularity", "color_score", "size_score", "quality_score"):
+        if column in df3d.columns:
+            df2d[column] = df3d[column]
     return df2d.reset_index(drop=True)
 
 
@@ -360,7 +399,11 @@ def remove_close_points_3d(
 ) -> tuple[pd.DataFrame, int, float]:
     """Remove near-duplicate rows by comparing their 3D positions.
 
-    The first point in each proximity group is kept to preserve the user-visible order.
+    Candidates compete using Q = .25*circularity + .35*size + .40*color.
+    Size is area divided by the largest area in the direct 3D neighbourhood.
+    Greedy suppression runs in descending quality order with geometric tie-breaks;
+    surviving rows retain their display order. Isolated points are never removed.
+    Missing metrics in legacy/manual rows contribute zero.
     Unmapped rows are preserved because they cannot be compared in 3D space.
     """
     if df3d is None or df3d.empty:
@@ -377,21 +420,30 @@ def remove_close_points_3d(
     coords = df.loc[:, list(coord_cols)].apply(pd.to_numeric, errors="coerce").to_numpy(dtype=float)
     valid = np.isfinite(coords).all(axis=1)
 
-    keep = np.ones(len(df), dtype=bool)
     valid_idx = np.flatnonzero(valid)
-    for pos, idx in enumerate(valid_idx):
+    def metric(name: str) -> np.ndarray:
+        values = df[name] if name in df.columns else pd.Series(0.0, index=df.index)
+        return pd.to_numeric(values, errors="coerce").fillna(0).to_numpy(dtype=float)
+
+    areas = np.maximum(np.nan_to_num(metric("area"), posinf=0, neginf=0), 0)
+    sizes = np.zeros(len(df), dtype=float)
+    neighbours = {}
+    for idx in valid_idx:
+        nearby = valid_idx[np.linalg.norm(coords[valid_idx] - coords[idx], axis=1) <= threshold]
+        neighbours[idx] = nearby
+        largest = float(areas[nearby].max()) if len(nearby) else 0.0
+        sizes[idx] = areas[idx] / largest if largest > 0 else 0.0
+    df["size_score"] = sizes
+    df["quality_score"] = (0.25 * np.clip(metric("circularity"), 0, 1)
+                           + 0.35 * sizes + 0.40 * np.clip(metric("color_score"), 0, 1))
+    quality = df["quality_score"].to_numpy()
+    px, py = metric("pixel_x"), metric("pixel_y")
+    order = sorted(valid_idx, key=lambda idx: (-quality[idx], *coords[idx], px[idx], py[idx]))
+    keep = np.ones(len(df), dtype=bool)
+    for idx in order:
         if not keep[idx]:
             continue
-        if pos + 1 >= len(valid_idx):
-            break
-        rest = valid_idx[pos + 1:]
-        if len(rest) == 0:
-            continue
-        deltas = coords[rest] - coords[idx]
-        dists = np.linalg.norm(deltas, axis=1)
-        close_mask = dists <= threshold
-        if np.any(close_mask):
-            keep[rest[close_mask]] = False
+        keep[neighbours[idx][neighbours[idx] != idx]] = False
 
     removed = int((~keep).sum())
     return df.loc[keep].reset_index(drop=True), removed, threshold

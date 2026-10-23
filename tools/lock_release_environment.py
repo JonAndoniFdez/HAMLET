@@ -10,7 +10,7 @@ pending = ['PyInstaller', 'pyinstaller-hooks-contrib', 'PySide6', 'numpy', 'pand
            'scipy', 'opencv-python', 'Pillow', 'openpyxl', 'xlrd', 'vedo', 'vtk',
            'trimesh', 'pyvista', 'pyvistaqt', 'PyYAML', 'psutil', 'pywin32']
 packages = {}
-inventory = ROOT / 'output/dependency_audit/inventory.json'
+inventory = ROOT / 'build/dependency_audit/inventory.json'
 if inventory.is_file():
     pending += [item['name'] for item in json.loads(inventory.read_text(encoding='utf-8'))['packages']]
 while pending:

@@ -12,6 +12,9 @@ import sys
 import zipfile
 import yaml
 import win32api
+from source_manifest import application_source_files
+from check_portable_release import verify as verify_portable
+from download_dependency_sources import load_sources
 
 ROOT = Path(__file__).resolve().parents[1]
 EXPECTED_QT = {'Core', 'Gui', 'Network', 'OpenGL', 'OpenGLWidgets', 'Positioning',
@@ -47,12 +50,14 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--test-results', type=Path, required=True)
     parser.add_argument('--zip', action='store_true')
+    parser.add_argument('--source-zips', action='store_true', help='Also create source archives (separate from the portable ZIP)')
     parser.add_argument('--for-publication', action='store_true')
     args = parser.parse_args()
     approvals = json.loads((ROOT / 'release-approvals.json').read_text(encoding='utf-8'))
-    blockers = {k: v for k, v in approvals.items() if v['status'] != 'confirmed'}
-    if args.for_publication and blockers:
-        raise SystemExit('Public release blocked: ' + ', '.join(blockers))
+    authorized = approvals.get('publication_authorization', {}).get('status') == 'confirmed'
+    publication_notes = {k: v for k, v in approvals.items() if v['status'] != 'confirmed'}
+    if args.for_publication and not authorized:
+        raise SystemExit('Public release requires the project owner publication authorization')
     dist = ROOT / 'dist/HAMLET'
     companion = ROOT / 'dist/source-companion'
     tests = json.loads(args.test_results.read_text(encoding='utf-8'))
@@ -67,7 +72,9 @@ def main():
     assert version == '1.0.0.0', f'Unexpected executable version: {version}'
     assert sha(dist / 'LICENSE.txt') == sha(ROOT / 'third_party_licenses/common/GPL-3.0.txt'), 'Application GPL text changed'
     notice_text = (dist / 'NOTICE.txt').read_text(encoding='utf-8')
-    assert 'GPL-3.0-only' in notice_text and citation['doi'] in notice_text
+    assert 'GPL-3.0-only' in notice_text
+    assert not any(key.lower() == 'doi' for key in citation), 'Publication identifier present in citation metadata'
+    assert 'https://github.com/JonAndoniFdez/HAMLET' in (dist / 'README.txt').read_text(encoding='utf-8')
     for author in citation['authors']:
         assert author['given-names'] + ' ' + author['family-names'] in notice_text
     for name in ('LICENSE', 'Version.txt', 'models/hand/pose_deploy.prototxt', 'models/hand/pose_iter_102000.caffemodel'):
@@ -90,13 +97,16 @@ def main():
     for package in notices['packages']:
         for notice in package['notices']:
             assert sha(dist / notice['file']) == notice['sha256'], notice['file']
-    for name in ('LICENSE.txt', 'NOTICE.txt', 'THIRD_PARTY_NOTICES.md', 'SOURCE_CODE.md', 'RELEASE_LEGAL_CHECKLIST.md', 'docs/README.pdf', 'README_RELEASE.txt', 'CITATION.cff', 'OPENPOSE_MODELS_NOTICE.txt'):
+    for name in ('LICENSE.txt', 'THIRD_PARTY_LICENSES.txt', 'NOTICE.txt', 'THIRD_PARTY_NOTICES.md', 'SOURCE_CODE.md', 'docs/README.pdf', 'CITATION.cff', 'OPENPOSE_MODELS_NOTICE.txt'):
         assert sha(dist / name) == sha(ROOT / name), f'Outdated release document: {name}'
+    assert sha(dist / 'README.txt') == sha(ROOT / 'README_RELEASE.txt'), 'Outdated README'
     credits = dist / 'third_party_licenses/QtWebEngine-credits.html'
     assert credits.stat().st_size > 100000 and 'Redistribution' in credits.read_text(encoding='utf-8')
     assert sha(credits) == sha(ROOT / 'third_party_licenses/QtWebEngine-credits.html')
     source_entries = []
     source_versions = {}
+    pinned_sources = {item['path']: item for item in load_sources(ROOT / 'third_party_licenses/SOURCE_DOWNLOADS.json')}
+    verified_paths = set()
     for relative in ('SOURCES.json', 'native/SOURCES.json'):
         manifest = companion / relative
         sources = json.loads(manifest.read_text(encoding='utf-8'))['sources']
@@ -105,9 +115,15 @@ def main():
             assert item['status'] == 'downloaded', item
             path = manifest.parent / item['filename']
             assert sha(path) == item['sha256'], path
+            source_path = path.relative_to(companion).as_posix()
+            assert source_path in pinned_sources, f'Source archive missing from public catalog: {source_path}'
+            pinned = pinned_sources[source_path]
+            assert all(pinned[key] == item[key] for key in ('name', 'version', 'sha256', 'bytes', 'url')), f'Outdated public source catalog: {source_path}'
+            verified_paths.add(source_path)
             source_entries.append((path, path.relative_to(companion).as_posix()))
             if relative == 'SOURCES.json':
                 source_versions[re.sub(r'[-_.]+', '-', item['name'].lower())] = item['version']
+    assert verified_paths == set(pinned_sources), 'Public source catalog and retained archives differ'
     source_aliases = {'pyside6': 'qtforpython', 'pyside6-addons': 'qtforpython',
                       'pyside6-essentials': 'qtforpython', 'shiboken6': 'qtforpython'}
     for package in notices['packages']:
@@ -122,39 +138,32 @@ def main():
     print('Executable, Qt selection, original notices and source archive hashes verified', flush=True)
     provenance = {'git_head': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
                   'version': citation['version'], 'windows_version': version,
-                  'own_code_license': citation['license'], 'reserved_doi': citation['doi'],
+                  'own_code_license': citation['license'],
                   'working_tree_snapshot': True, 'python_version': sys.version.split()[0],
                   'requirements_lock_sha256': sha(ROOT / 'requirements-release.lock.txt'),
                   'executable_sha256': sha(dist / 'HAMLET.exe'),
                   'qt_modules': sorted(qt), 'tests': tests,
                   'test_execution': execution,
                   'dependency_archives': len(source_entries)-2,
-                  'publication_status': 'blocked' if blockers else 'approved', 'publication_blockers': blockers}
+                  'publication_status': 'owner_authorized' if authorized else 'local_candidate',
+                  'publication_notes': publication_notes}
     files = [{'path': p.relative_to(dist).as_posix(), 'bytes': p.stat().st_size, 'sha256': sha(p)}
              for p in sorted(dist.rglob('*')) if p.is_file() and p.name != 'release-manifest.json']
     write_json(dist / 'release-manifest.json', {'provenance': provenance, 'files': files})
     report = {'technical_validation': 'passed', **provenance, 'file_count': len(files), 'uncompressed_bytes': sum(f['bytes'] for f in files)}
+    report['portable_content_checks'] = verify_portable(dist)
     if args.zip:
         artifacts = []
         artifacts.append(archive(ROOT / 'dist/HAMLET.zip', [(p, p.relative_to(dist).as_posix()) for p in dist.rglob('*') if p.is_file()], zipfile.ZIP_DEFLATED))
-        source_entries.append((ROOT / 'SOURCE_CODE.md', 'SOURCE_CODE.md'))
-        artifacts.append(archive(ROOT / 'dist/HAMLET-dependency-sources.zip', source_entries, zipfile.ZIP_STORED))
-        application = []
-        for directory in ('src', 'tools', 'third_party_licenses'):
-            for p in (ROOT / directory).rglob('*'):
-                if p.is_file() and '__pycache__' not in p.parts and p.suffix not in {'.pyc', '.pyo'}:
-                    application.append((p, p.relative_to(ROOT).as_posix()))
-        for name in ('run_app.py', 'HAMLET.spec', 'build_release.ps1', 'version_info.txt', 'requirements.txt',
-                     'requirements-release.lock.txt', 'LICENSE.txt', 'NOTICE.txt', 'SOURCE_CODE.md',
-                     'THIRD_PARTY_NOTICES.md', 'RELEASE_LEGAL_CHECKLIST.md', 'release-approvals.json', 'docs/RELEASE_BUILD.md', 'docs/README.pdf'):
-            application.append((ROOT / name, name))
-        for name in ('README_RELEASE.txt', 'CITATION.cff', 'OPENPOSE_MODELS_NOTICE.txt'):
-            application.append((ROOT / name, name))
-        artifacts.append(archive(ROOT / 'dist/HAMLET-application-source.zip', application, zipfile.ZIP_DEFLATED))
+        if args.source_zips:
+            source_entries.append((ROOT / 'SOURCE_CODE.md', 'SOURCE_CODE.md'))
+            artifacts.append(archive(ROOT / 'dist/HAMLET-dependency-sources.zip', source_entries, zipfile.ZIP_STORED))
+            application = [(p, p.relative_to(ROOT).as_posix()) for p in application_source_files(ROOT)]
+            artifacts.append(archive(ROOT / 'dist/HAMLET-application-source.zip', application, zipfile.ZIP_DEFLATED))
         report['artifacts'] = artifacts
         (ROOT / 'dist/SHA256SUMS.txt').write_text(''.join(f"{a['sha256']}  {a['filename']}\n" for a in artifacts), encoding='ascii')
     write_json(ROOT / 'dist/RELEASE_VALIDATION.json', report)
-    print(json.dumps({k: v for k, v in report.items() if k not in {'tests', 'publication_blockers'}}, indent=2))
+    print(json.dumps({k: v for k, v in report.items() if k not in {'tests', 'publication_notes'}}, indent=2))
 
 
 if __name__ == '__main__':

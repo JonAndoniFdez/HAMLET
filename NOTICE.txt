@@ -34,4 +34,3 @@ commercial-use or redistribution rights to those model files.
 
 Source access and build instructions: see SOURCE_CODE.md.
 Public version: 1.0 (Windows metadata: 1.0.0.0).
-Reserved software DOI: 10.5281/zenodo.23056922 (registration upon publication).

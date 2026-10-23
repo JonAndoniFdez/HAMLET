@@ -84,8 +84,9 @@ def collect_license_files(entries, generated_dir: Path, common_dir: Path):
                '<style>body{font:16px/1.5 system-ui;max-width:1000px;margin:40px auto;padding:0 20px}a{overflow-wrap:anywhere}details{margin:12px 0}summary{font-weight:bold}</style>',
                '<h1>HAMLET third-party licenses and source code</h1>',
                '<p>Original HAMLET code: <a href="../LICENSE.txt">GNU GPLv3</a> (GPL-3.0-only). <a href="../NOTICE.txt">Authors and copyright</a> · <a href="../CITATION.cff">Citation metadata</a>.</p>',
-               '<p>Third-party components retain their own licenses. These notices do not relicense HAMLET or grant permission for OpenPose model redistribution.</p>',
-               '<p><a href="../SOURCE_CODE.md">Source code, rebuilding and replacing libraries</a> · <a href="../THIRD_PARTY_NOTICES.md">Component overview</a> · <a href="dependency-licenses.json">Exact Python package inventory</a></p>',
+               '<p>Third-party components retain their own licenses. OpenPose hand models retain CMU academic/noncommercial research terms.</p>',
+               '<p><a href="../THIRD_PARTY_LICENSES.txt">Software licenses: readable component summary</a> · <a href="../SOURCE_CODE.md">Source code, rebuilding and replacing libraries</a> · <a href="dependency-licenses.json">Exact Python package inventory</a></p>',
+               '<p><a href="../docs/DEPENDENCY_SOURCES.md">Exact dependency-source downloads and instructions</a> · <a href="SOURCE_DOWNLOADS.json">Pinned source archive catalog and SHA-256 digests</a> · <a href="source-availability/urls.json">Dated source URL checks</a> · <a href="source-availability/integrity.json">Full local source archive verification</a></p>',
                '<p><a href="../blender/license/license.md">Blender original notices</a> · <a href="../openpose/LICENSE">OpenPose terms</a> · <a href="../OPENPOSE_MODELS_NOTICE.txt">OpenPose model provenance and status</a> · <a href="QtWebEngine-credits.html">Qt WebEngine and Chromium notices from the exact Qt source archive</a></p>',
                '<p>Upstream source notices include unused and build-only components; their presence does not mean that every component is included in HAMLET.</p>']
     for group, paths in sorted(sections.items()):

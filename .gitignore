@@ -1,20 +1,31 @@
-# Local dependencies and generated results (root only).
+# External runtimes (keep src/assets/blender tracked).
 /blender/
 /openpose/
+
+# Builds, generated reports and private working material.
 /build/
 /dist/
 /output/
 /tmp/
+/.local/
 /.venv/
 /venv/
-/.idea/
-/.vscode/
+
+# Python and developer caches.
 __pycache__/
 *.py[cod]
-*.log
-.env
-.env.*
-!.env.example
-Thumbs.db
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# Editor and operating-system temporary files.
+~$*
+*.tmp
 .DS_Store
-# Keep src/assets/blender and the original third-party notices in Git.
+Thumbs.db
+
+# Regenerated from verified upstream source archives by release preparation.
+/third_party_licenses/upstream-sources/
+/third_party_licenses/QtWebEngine-credits.html

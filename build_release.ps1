@@ -22,7 +22,25 @@ if ([string]::IsNullOrWhiteSpace($PythonExe)) {
 }
 
 if ((Split-Path -Leaf $PythonExe).ToLowerInvariant() -eq "py.exe") {
-    & $PythonExe -3 -m PyInstaller --noconfirm --clean --distpath "$Root\dist" --workpath "$Root\build" "$Root\HAMLET.spec"
+    & $PythonExe -3.11 -B "$Root\tools\check_source.py" --check-environment --report "$Root\build\source-check.json"
+} else {
+    & $PythonExe -B "$Root\tools\check_source.py" --check-environment --report "$Root\build\source-check.json"
+}
+if ($LASTEXITCODE -ne 0) {
+    throw "Source/environment checks failed. No executable was built."
+}
+
+if ((Split-Path -Leaf $PythonExe).ToLowerInvariant() -eq "py.exe") {
+    & $PythonExe -3.11 -B -m unittest discover -s "$Root\tests" -v
+} else {
+    & $PythonExe -B -m unittest discover -s "$Root\tests" -v
+}
+if ($LASTEXITCODE -ne 0) {
+    throw "Source regression checks failed. No executable was built."
+}
+
+if ((Split-Path -Leaf $PythonExe).ToLowerInvariant() -eq "py.exe") {
+    & $PythonExe -3.11 -m PyInstaller --noconfirm --clean --distpath "$Root\dist" --workpath "$Root\build" "$Root\HAMLET.spec"
 } else {
     & $PythonExe -m PyInstaller --noconfirm --clean --distpath "$Root\dist" --workpath "$Root\build" "$Root\HAMLET.spec"
 }
@@ -32,7 +50,7 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 if ((Split-Path -Leaf $PythonExe).ToLowerInvariant() -eq "py.exe") {
-    & $PythonExe -3 "$Root\tools\verify_release_preview.py" "$Root\dist\HAMLET\HAMLET.exe"
+    & $PythonExe -3.11 "$Root\tools\verify_release_preview.py" "$Root\dist\HAMLET\HAMLET.exe"
 } else {
     & $PythonExe "$Root\tools\verify_release_preview.py" "$Root\dist\HAMLET\HAMLET.exe"
 }
@@ -45,13 +63,13 @@ if ($Zip) {
     $runnerArgs = @("$Root\tools\run_release_selftest.py", "$Root\dist\HAMLET\HAMLET.exe", $testDir)
     $finalArgs = @("$Root\tools\finalize_release.py", "--test-results", "$testDir\results.json", "--zip")
     if ((Split-Path -Leaf $PythonExe).ToLowerInvariant() -eq "py.exe") {
-        & $PythonExe -3 @runnerArgs
+        & $PythonExe -3.11 @runnerArgs
     } else {
         & $PythonExe @runnerArgs
     }
     if ($LASTEXITCODE -ne 0) { throw "Executable integration checks failed; release ZIPs were not regenerated." }
     if ((Split-Path -Leaf $PythonExe).ToLowerInvariant() -eq "py.exe") {
-        & $PythonExe -3 @finalArgs
+        & $PythonExe -3.11 @finalArgs
     } else {
         & $PythonExe @finalArgs
     }

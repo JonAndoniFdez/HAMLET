@@ -22,13 +22,6 @@ of the original license or grant a right to sublicense the models.
 The original license also contains separate third-party notices for Caffe;
 those notices do not replace the OpenPose license.
 
-REDISTRIBUTION STATUS
-The official OpenPose README describes noncommercial redistribution, while
-LICENSE contains restrictions on distribution and third-party access. The
-HAMLET team has requested clarification; no response is recorded in this
-release. Inclusion in this local package and preservation of these notices
-do not establish additional redistribution permission or CMU endorsement.
-
 FILE IDENTIFICATION (SHA-256)
 pose_deploy.prototxt:
 d722796d87f251aadf8eb1af9dca03b3732e8a1d1bb524961a29c8e5073a8251

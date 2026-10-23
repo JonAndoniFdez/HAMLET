@@ -1,61 +1,40 @@
-# HAMLET release checklist
+# HAMLET 1.0 release procedure
 
-This is a local candidate, not permission to publish. The machine-readable
-status is in `release-approvals.json`; `dist/RELEASE_VALIDATION.json` records
-checks on a specific generated release. A successful build alone is not approval.
+## Publication structure
 
-## Technical preparation
+- Source repository and release: https://github.com/JonAndoniFdez/HAMLET.
+- Tag `v1.0` identifies the matching HAMLET application source and build tools.
+- The Git tree excludes Blender/OpenPose installations, model weights, dependency
+  source archives, Python/Qt runtime binaries and generated build outputs.
+- The portable `HAMLET.zip` contains the complete required runtime distribution.
+- The Zenodo description links to GitHub. The repository README links to the
+  reserved software DOI; that identifier is excluded from portable HAMLET files.
+- Exact dependency sources are obtained from official project servers using
+  `docs/DEPENDENCY_SOURCES.md` and `third_party_licenses/SOURCE_DOWNLOADS.json`.
+  HAMLET does not operate a dependency download service.
 
-- [x] Collect original Python package and runtime notices from actual build inputs.
-- [x] Preserve Three.js r128, Blender and OpenPose notices.
-- [x] Obtain exact Qt/PySide source license trees and attribution records.
-- [x] Restrict Qt bindings/plugins and omit the unused QML tree.
-- [x] Keep Blender's runtime separate from HAMLET's dependency analysis.
-- [x] Restrict DLL discovery to controlled build locations; reject unrelated runtimes.
-- [x] Pin the installed dependency closure in `requirements-release.lock.txt`.
-- [x] Prepare exact upstream source archives, Blender dependency sources, hashes,
-      patches/build recipes and instructions for replacing LGPL libraries.
-- [x] Record the project owner's confirmation of a valid Visual Studio 2022 license
-      and preserve Microsoft's terms and redistribution list.
-- [x] Provide executable integration tests and artifact validation/ZIP tooling.
+## License and source information
 
-The generated validation report, rather than a checkbox here, must establish
-that the final build passes, includes the complete notices/credits, matches its
-source, and that all source archives and ZIP contents verify successfully.
+Original HAMLET code is GPL-3.0-only and belongs to the authors in NOTICE.txt.
+Third-party components retain their own terms. Preserve original license texts,
+Qt/Chromium attributions, Blender notices and OpenPose model provenance.
+`SOURCE_CODE.md` explains rebuilding and LGPL library replacement. Follow the
+GPLv3 section 6(d) third-party-server source-access procedure, including continued
+availability and clear directions next to the binary download.
 
-## Required before public release
+The project owner has explicitly requested public distribution with the OpenPose
+hand models for scientific research. That instruction is publication authorization
+from the project owner, not a claim of a separate grant by CMU. The unmodified
+OpenPose license and the model-specific notice remain in the portable package.
 
-- [x] Project owner confirmed author ownership (superseding earlier UJI ownership)
-      and instructed GPLv3 on 2026-09-30. GPL-3.0-only now applies to original code;
-      LICENSE.txt and NOTICE.txt updated. Third-party assets keep their own terms.
-- [ ] Obtain and retain OpenPose's written response covering the exact weights
-      and prototxt files, distribution through Zenodo/GitHub and intended uses.
-      Request was sent by the project owner; models remain included as requested.
-- [x] Record the user's real-hand test from an extracted ZIP on another computer.
-      On 2026-09-29 the project owner confirmed successful operation with a
-      real hand after transferring HAMLET.zip to another computer without
-      Blender installed. Absence of development Python and Qt installations
-      has not been explicitly documented.
-      Synthetic integration tests do not establish anatomical accuracy.
-- [x] Set the first public release to 1.0 (Windows metadata: 1.0.0.0).
-      Validate actual executable version and notices during the final build.
-- [x] Record user-supplied reserved DOI 10.5281/zenodo.23056922; no publication yet.
-- [ ] Publish the binary and provide clear links to matching application and
-      dependency sources, with persistent download access and hashes. Sources
-      may be hosted outside the binary's Zenodo record.
-- [ ] Record the final approved source tag/commit, DOI and repository links.
+## Technical evidence
 
-Run `tools/finalize_release.py --test-results <results.json> --for-publication`
-to reject publication while approvals are unresolved. Update approval evidence
-only after receiving it; do not turn pending items into confirmed by assumption.
+Run the source/environment checks, regression tests and frozen-executable
+integration suite. Verify exact model/source hashes, original notices, portable
+metadata, PDF guide, icon, ZIP CRC and SHA-256. Keep reports for the actual ZIP
+being uploaded. Synthetic integration checks do not validate anatomical accuracy
+or replace testing a real project on the target Windows installation.
 
-## Packaging and sources
-
-The three deliverables are `HAMLET.zip`, `HAMLET-application-source.zip` and
-`HAMLET-dependency-sources.zip`. The finalizer verifies notice hashes, exact Qt
-selection, source coverage, executable tests, build input hashes and ZIP CRCs.
-`SHA256SUMS.txt` identifies the generated artifacts.
-
-Compressed/embedded scripts are not encryption. Source hiding is not a release
-objective and cannot override GPL/LGPL source requirements. Readable application
-and Blender scripts belong in the matching source download once authorized.
+Publication authorization and provenance are recorded in `release-approvals.json`.
+The public source commit/tag and uploaded asset digests must be recorded after
+verification. A completed upload must be checked through GitHub's public API.

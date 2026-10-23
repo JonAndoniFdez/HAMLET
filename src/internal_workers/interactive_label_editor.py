@@ -5,7 +5,6 @@ from pathlib import Path
 
 import numpy as np
 
-#PaperRelease
 from PySide6.QtCore import Qt, QTimer
 from PySide6.QtWidgets import (
     QApplication,
@@ -1385,7 +1384,8 @@ def main():
 
     colors_csv = args.colors_csv
     if not colors_csv:
-        candidate = Path(__file__).with_name("pointsColor.csv")
+        from src.core.paths import asset_path
+        candidate = asset_path("data", "pointsColor.csv")
         if candidate.exists():
             colors_csv = str(candidate)
 

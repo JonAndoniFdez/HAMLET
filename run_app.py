@@ -3,10 +3,7 @@ import importlib
 from pathlib import Path
 
 
-_WORKER_MODULES = {
-    "detect-map": "src.internal_workers.detect_map_worker",
-    "label-editor": "src.internal_workers.interactive_label_editor",
-}
+from src.core.worker_commands import WORKER_MODULES
 
 _LEGACY_SCRIPT_WORKERS = {
     "detect_map_worker.py": "detect-map",
@@ -15,7 +12,7 @@ _LEGACY_SCRIPT_WORKERS = {
 
 
 def _run_internal_worker(worker_name: str, args: list[str]) -> bool:
-    module_name = _WORKER_MODULES.get(worker_name)
+    module_name = WORKER_MODULES.get(worker_name)
     if not module_name:
         raise SystemExit(f"Unknown internal worker: {worker_name}")
 

@@ -13,7 +13,7 @@ from docx.shared import Inches, Pt, RGBColor
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT_DIR = ROOT / "docs"
+OUT_DIR = ROOT / "output" / "user-guide-draft"
 DOCX_PATH = OUT_DIR / "Automatic_Hand_Measurement_Tool_User_Guide.docx"
 
 

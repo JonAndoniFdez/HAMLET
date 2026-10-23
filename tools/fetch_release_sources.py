@@ -49,7 +49,7 @@ def fetch(item, folder):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--inventory", type=Path, default=Path("output/dependency_audit/inventory.json"))
+    parser.add_argument("--inventory", type=Path, default=Path("build/dependency_audit/inventory.json"))
     parser.add_argument("--out", type=Path, default=Path("dist/source-companion"))
     args = parser.parse_args()
     args.out.mkdir(parents=True, exist_ok=True)

@@ -1,32 +1,48 @@
 # Source code and rebuilding HAMLET
 
-This is a local release candidate. Original HAMLET code is licensed under
+Original HAMLET code is licensed under
 GPL-3.0-only by its authors, identified in NOTICE.txt, following the project
 owner's confirmation on 2026-09-30. LICENSE.txt contains the unchanged GPLv3 text.
-Public distribution of the included OpenPose models remains unresolved.
 Third-party components retain their own licenses and rights independently.
 
-## Official source repository
+## Obtaining the corresponding sources
 
-Repository: https://github.com/JonAndoniFdez/HAMLET
+For **dependency sources**, start with
+[the download instructions and version-specific links](docs/DEPENDENCY_SOURCES.md).
+The maintained [source catalog](third_party_licenses/SOURCE_DOWNLOADS.json)
+identifies the exact archive names, versions, HTTPS downloads, byte counts and
+SHA-256 digests. It also records Blender's original dependency-recipe hashes.
+The dated evidence in `third_party_licenses/source-availability/` distinguishes
+full local integrity verification from live HTTP availability checks.
 
-This checkout starts a new history from the validated 1.0 source archive.
-`release/SOURCE_SNAPSHOT.json` identifies that archive and the unchanged
-application/build inputs. The final release tag and public dependency-source
-download locations must still be recorded here when published. Do not use a
-moving development branch as the only reference for a distributed binary.
+For **HAMLET's own source**, use the [v1.0 source release](https://github.com/JonAndoniFdez/HAMLET/tree/v1.0)
+or its [source archive](https://github.com/JonAndoniFdez/HAMLET/archive/refs/tags/v1.0.zip).
+The [Windows release](https://github.com/JonAndoniFdez/HAMLET/releases/tag/v1.0)
+provides the portable application. The source tree contains no Blender runtime,
+OpenPose model weights, Python installation or Qt binaries. Obtain these from
+the official sources in [EXTERNAL_RUNTIMES.md](docs/EXTERNAL_RUNTIMES.md).
 
-## Source companion
+The Zenodo record may contain HAMLET.zip alone if its download description clearly
+links to the matching application source release and these dependency-source
+directions. Neither an extra application-source ZIP nor a dependency-source ZIP
+with a particular name is required. Equivalent, complete source access is required.
+Source access must involve no additional payment, login or permission request.
 
-The Zenodo record may contain HAMLET.zip alone if it clearly links to the exact
-matching application source release and the required dependency sources hosted
-elsewhere. The prepared source ZIPs may be used for those downloads; they need
-not be attached to the same Zenodo record. Source downloads must be accessible
-without additional payment or access restrictions and kept available as required
-by the applicable licenses. A project's home page alone is not an exact source
-download. Final public source locations remain to be established before release.
+[GPLv3 section 6(d)](https://www.gnu.org/licenses/gpl-3.0.html#section6)
+expressly permits corresponding sources on a different server, including a
+third-party server. Clear directions must appear next to the object-code download;
+the distributor remains responsible for source availability. See also the
+[FSF explanation](https://www.gnu.org/licenses/gpl-faq.en.html#SourceAndBinaryOnDifferentSites).
+The instructions document the maintenance and mirror procedure; a successful
+check today does not guarantee future availability. Dependency sources are hosted
+by their upstream projects; HAMLET does not operate a dependency download server.
+The source-access procedure follows the GPLv3 section 6(d) third-party-server
+option and retains the distributor's obligation to maintain access. GPL/LGPL
+texts, rather than summaries on vendor websites, govern that option.
 
-The dependency companion contains exact upstream archives for Qt 6.10.2
+## Contents and provenance
+
+The local, untracked dependency source cache contains exact upstream archives for Qt 6.10.2
 (including Chromium and its FFmpeg), Qt for Python 6.10.2, Blender 4.3.2,
 CPython 3.11.9, VTK 9.5.1 and the selected Python distributions. `SOURCES.json`
 records origin URLs, versions, byte counts and SHA-256 digests. `native/SOURCES.json`
@@ -39,7 +55,7 @@ PySide source archive includes the Qt for Python build system. No HAMLET patches
 are applied to these upstream runtimes. Sources for unused platforms/build
 components can also be present; inclusion is not a statement that all are shipped.
 
-The application source companion includes the readable Blender scripts, worker
+The application source release includes the readable HAMLET-authored Blender scripts, worker
 modules, GUI, assets, build specification and release tools. The compressed
 payload in the executable is packaging, not encryption, and does not replace
 the source-code download or remove third-party source obligations.
@@ -90,10 +106,10 @@ redistribution list are supplied in `third_party_licenses/Microsoft/`.
 
 ## Publication record
 
-Before publication, record the final approved license, authors, exact version,
-source tag/commit and persistent download URLs in the release record. The
-source version is 1.0.0.0 for the first public release, named 1.0. The reserved
-software DOI is 10.5281/zenodo.23056922; it becomes active upon publication.
+The release uses GPL-3.0-only for original HAMLET code, the four authors in
+NOTICE.txt, the source tag `v1.0` and the GitHub URLs linked above. Record the
+actual published source commit and uploaded asset digests in the release evidence.
+The Windows version is 1.0.0.0 for the first public release, named 1.0.
 The final build's version and hashes are recorded in release-manifest.json.
 The original application code is GPLv3; do not describe the entire bundled
 package, including OpenPose models, as uniformly GPL-licensed or unrestricted.

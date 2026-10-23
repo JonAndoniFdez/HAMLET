@@ -1,0 +1,1379 @@
+{
+  "checked_at_utc": "2026-10-23T08:29:19.810890+00:00",
+  "mode": "verify-local",
+  "manifest_sha256": "9a82389ab3e53fcf400df6759e962dd03c7ad6347741da6f61811c31293a8368",
+  "status": "passed",
+  "archive_count": 152,
+  "scope": "all manifest entries",
+  "limitation": "A dated technical check; not a guarantee of future availability or a public-release approval.",
+  "sources": [
+    {
+      "name": "anyio",
+      "version": "4.11.0",
+      "path": "anyio-4.11.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/c6/78/7d432127c41b50bccba979505f272c16cbcadcc33645d5fa3a738110ae75/anyio-4.11.0.tar.gz",
+      "status": "verified",
+      "sha256": "82a8d0b81e318cc5ce71a5f1f8b5c4e63619620b63141ef8c995fa0db95a57c4",
+      "bytes": 219094
+    },
+    {
+      "name": "attrs",
+      "version": "25.4.0",
+      "path": "attrs-25.4.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/6b/5c/685e6633917e101e5dcb62b9dd76946cbb57c26e133bae9e0cd36033c0a9/attrs-25.4.0.tar.gz",
+      "status": "verified",
+      "sha256": "16d5969b87f0859ef33a48b35d55ac1be6e42ae49d5e853b597db70c35c57e11",
+      "bytes": 934251
+    },
+    {
+      "name": "Blender",
+      "version": "4.3.2",
+      "path": "blender-4.3.2.tar.xz",
+      "url": "https://download.blender.org/source/blender-4.3.2.tar.xz",
+      "status": "verified",
+      "sha256": "c8d6ad4e32751431e0fafaf4f3184b70622297ab0b0c6e5a9fa134f72bd696d8",
+      "bytes": 74473996
+    },
+    {
+      "name": "certifi",
+      "version": "2025.8.3",
+      "path": "certifi-2025.8.3.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/dc/67/960ebe6bf230a96cda2e0abcf73af550ec4f090005363542f0765df162e0/certifi-2025.8.3.tar.gz",
+      "status": "verified",
+      "sha256": "e564105f78ded564e3ae7c923924435e1daa7463faeab5bb932bc53ffae63407",
+      "bytes": 162386
+    },
+    {
+      "name": "cffi",
+      "version": "2.0.0",
+      "path": "cffi-2.0.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/eb/56/b1ba7935a17738ae8453301356628e8147c79dbb825bcbc73dc7401f9846/cffi-2.0.0.tar.gz",
+      "status": "verified",
+      "sha256": "44d1b5909021139fe36001ae048dbdde8214afa20200eda0f64c068cac5d5529",
+      "bytes": 523588
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.4.3",
+      "path": "charset_normalizer-3.4.3.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/83/2d/5fd176ceb9b2fc619e63405525573493ca23441330fcdaee6bef9460e924/charset_normalizer-3.4.3.tar.gz",
+      "status": "verified",
+      "sha256": "6fce4b8500244f6fcb71465d4a4930d132ba9ab8e71a7859e6a5d59851068d14",
+      "bytes": 122371
+    },
+    {
+      "name": "click",
+      "version": "8.3.1",
+      "path": "click-8.3.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/3d/fa/656b739db8587d7b5dfa22e22ed02566950fbfbcdc20311993483657a5c0/click-8.3.1.tar.gz",
+      "status": "verified",
+      "sha256": "12ff4785d337a1bb490bb7e9c2b1ee5da3112e94a8622f26a6c77f5d2fc6842a",
+      "bytes": 295065
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "path": "colorama-0.4.6.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz",
+      "status": "verified",
+      "sha256": "08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44",
+      "bytes": 27697
+    },
+    {
+      "name": "et_xmlfile",
+      "version": "2.0.0",
+      "path": "et_xmlfile-2.0.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/d3/38/af70d7ab1ae9d4da450eeec1fa3918940a5fafb9055e934af8d6eb0c2313/et_xmlfile-2.0.0.tar.gz",
+      "status": "verified",
+      "sha256": "dab3f4764309081ce75662649be815c4c9081e88f0837825f90fd28317d4da54",
+      "bytes": 17234
+    },
+    {
+      "name": "fsspec",
+      "version": "2025.10.0",
+      "path": "fsspec-2025.10.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/24/7f/2747c0d332b9acfa75dc84447a066fdf812b5a6b8d30472b74d309bfe8cb/fsspec-2025.10.0.tar.gz",
+      "status": "verified",
+      "sha256": "b6789427626f068f9a83ca4e8a3cc050850b6c0f71f99ddb4f542b8266a26a59",
+      "bytes": 309285
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "path": "h11-0.16.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/01/ee/02a2c011bdab74c6fb3c75474d40b3052059d95df7e73351460c8588d963/h11-0.16.0.tar.gz",
+      "status": "verified",
+      "sha256": "4e35b956cf45792e4caa5885e69fba00bdbc6ffafbfa020300e549b208ee5ff1",
+      "bytes": 101250
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "path": "httpcore-1.0.9.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/06/94/82699a10bca87a5556c9c59b5963f2d039dbd239f25bc2a63907a05a14cb/httpcore-1.0.9.tar.gz",
+      "status": "verified",
+      "sha256": "6e34463af53fd2ab5d807f399a9b45ea31c3dfa2276f15a2c3f00afff6e176e8",
+      "bytes": 85484
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "path": "httpx-0.28.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/b1/df/48c586a5fe32a0f01324ee087459e112ebb7224f646c0b5023f5e79e9956/httpx-0.28.1.tar.gz",
+      "status": "verified",
+      "sha256": "75e98c5f16b0f35b567856f597f06ff2270a374470a5c2392242528e3e3e42fc",
+      "bytes": 141406
+    },
+    {
+      "name": "idna",
+      "version": "3.10",
+      "path": "idna-3.10.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/f1/70/7703c29685631f5a7590aa73f1f1d3fa9a380e654b86af429e0934a32f7d/idna-3.10.tar.gz",
+      "status": "verified",
+      "sha256": "12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9",
+      "bytes": 190490
+    },
+    {
+      "name": "jsonschema",
+      "version": "4.26.0",
+      "path": "jsonschema-4.26.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/b3/fc/e067678238fa451312d4c62bf6e6cf5ec56375422aee02f9cb5f909b3047/jsonschema-4.26.0.tar.gz",
+      "status": "verified",
+      "sha256": "0c26707e2efad8aa1bfc5b7ce170f3fccc2e4918ff85989ba9ffa9facb2be326",
+      "bytes": 366583
+    },
+    {
+      "name": "jsonschema-specifications",
+      "version": "2025.9.1",
+      "path": "jsonschema_specifications-2025.9.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/19/74/a633ee74eb36c44aa6d1095e7cc5569bebf04342ee146178e2d36600708b/jsonschema_specifications-2025.9.1.tar.gz",
+      "status": "verified",
+      "sha256": "b540987f239e745613c7a9176f3edb72b832a4ac465cf02712288397832b5e8d",
+      "bytes": 32855
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.10.6",
+      "path": "matplotlib-3.10.6.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/a0/59/c3e6453a9676ffba145309a73c462bb407f4400de7de3f2b41af70720a3c/matplotlib-3.10.6.tar.gz",
+      "status": "verified",
+      "sha256": "ec01b645840dd1996df21ee37f208cd8ba57644779fa20464010638013d3203c",
+      "bytes": 34804264
+    },
+    {
+      "name": "Blender-ALEMBIC",
+      "version": "1.8.3",
+      "path": "native/alembic-1.8.3.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/alembic-1.8.3.tar.gz",
+      "status": "verified",
+      "sha256": "b0bc74833bff118a869e81e6acb810a58797e77ef63143954b2f8e817c7f65cb",
+      "bytes": 862221
+    },
+    {
+      "name": "Blender-BLOSC",
+      "version": "1.21.1",
+      "path": "native/blosc-1.21.1.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/blosc-1.21.1.tar.gz",
+      "status": "verified",
+      "sha256": "f387149eab24efa01c308e4cba0f59f64ccae57292ec9c794002232f7903b55b",
+      "bytes": 1456777
+    },
+    {
+      "name": "Blender-BOOST",
+      "version": "1.82.0",
+      "path": "native/boost_1_82_0.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/boost_1_82_0.tar.gz",
+      "status": "verified",
+      "sha256": "66a469b6e608a51f8347236f4912e27dc5c60c60d7d53ae9bfe4683316c6f04c",
+      "bytes": 142580547
+    },
+    {
+      "name": "Blender-BROTLI",
+      "version": "1.0.9",
+      "path": "native/brotli-v1.0.9.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/brotli-v1.0.9.tar.gz",
+      "status": "verified",
+      "sha256": "f9e8d81d0405ba66d181529af42a3354f838c939095ff99930da6aa9cdf6fe46",
+      "bytes": 486984
+    },
+    {
+      "name": "Blender-BZIP2",
+      "version": "1.0.8",
+      "path": "native/bzip2_1.0.8.orig.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/bzip2_1.0.8.orig.tar.gz",
+      "status": "verified",
+      "sha256": "ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269",
+      "bytes": 810029
+    },
+    {
+      "name": "Blender-DPCPP",
+      "version": "d2817d6d317db1143bb227168e85c409d5ab7c82",
+      "path": "native/DPCPP-d2817d6d317db1143bb227168e85c409d5ab7c82.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/DPCPP-d2817d6d317db1143bb227168e85c409d5ab7c82.tar.gz",
+      "status": "verified",
+      "sha256": "86cbff157b79e29a6ebb96ba79c96f64b4296c33fcd896f60a5579955fca5724",
+      "bytes": 230796365
+    },
+    {
+      "name": "Blender-EMBREE",
+      "version": "4.3.2-blender",
+      "path": "native/embree-v4.3.2-blender.zip",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/embree-v4.3.2-blender.zip",
+      "status": "verified",
+      "sha256": "14a360a4fe0b7952b954475b8f486892f5fa3aa6b4341bd8d9373d0b97c4c0b7",
+      "bytes": 71965028
+    },
+    {
+      "name": "Blender-FFMPEG",
+      "version": "6.1.1",
+      "path": "native/ffmpeg-6.1.1.tar.bz2",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/ffmpeg-6.1.1.tar.bz2",
+      "status": "verified",
+      "sha256": "5e3133939a61ef64ac9b47ffd29a5ea6e337a4023ef0ad972094b4da844e3a20",
+      "bytes": 12644326
+    },
+    {
+      "name": "Blender-FFTW",
+      "version": "3.3.10",
+      "path": "native/fftw-3.3.10.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/fftw-3.3.10.tar.gz",
+      "status": "verified",
+      "sha256": "56c932549852cddcfafdab3820b0200c7742675be92179e59e6215b340e26467",
+      "bytes": 4144100
+    },
+    {
+      "name": "Blender-FLAC",
+      "version": "1.4.2",
+      "path": "native/flac-1.4.2.tar.xz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/flac-1.4.2.tar.xz",
+      "status": "verified",
+      "sha256": "e322d58a1f48d23d9dd38f432672865f6f79e73a6f9cc5a5f57fcaa83eb5a8e4",
+      "bytes": 1013700
+    },
+    {
+      "name": "Blender-FMT",
+      "version": "9.1.0",
+      "path": "native/fmt-9.1.0.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/fmt-9.1.0.tar.gz",
+      "status": "verified",
+      "sha256": "5dea48d1fcddc3ec571ce2058e13910a0d4a6bab4cc09a809d8b1dd1c88ae6f2",
+      "bytes": 837901
+    },
+    {
+      "name": "Blender-FREETYPE",
+      "version": "2.13.0",
+      "path": "native/freetype-2.13.0.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/freetype-2.13.0.tar.gz",
+      "status": "verified",
+      "sha256": "a7aca0e532a276ea8d85bd31149f0a74c33d19c8d287116ef8f5f8357b4f1f80",
+      "bytes": 3819054
+    },
+    {
+      "name": "Blender-FRIBIDI",
+      "version": "v1.0.12",
+      "path": "native/fribidi-v1.0.12.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/fribidi-v1.0.12.tar.gz",
+      "status": "verified",
+      "sha256": "2e9e859876571f03567ac91e5ed3b5308791f31cda083408c2b60fa1fe00a39d",
+      "bytes": 2110289
+    },
+    {
+      "name": "Blender-SHADERC_GLSLANG",
+      "version": "89db4e1caa273a057ea46deba709c6e50001b314",
+      "path": "native/glslang-89db4e1caa273a057ea46deba709c6e50001b314.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/glslang-89db4e1caa273a057ea46deba709c6e50001b314.tar.gz",
+      "status": "verified",
+      "sha256": "150050b14f36b34995b89df944a7170f2ae46902c5cb8e7ac604fc5e89453d70",
+      "bytes": 3661730
+    },
+    {
+      "name": "Blender-LIBGLU",
+      "version": "9.0.1",
+      "path": "native/glu-9.0.1.tar.xz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/glu-9.0.1.tar.xz",
+      "status": "verified",
+      "sha256": "fb5a4c2dd6ba6d1c21ab7c05129b0769544e1d68e1e3b0ffecb18e73c93055bc",
+      "bytes": 434632
+    },
+    {
+      "name": "Blender-GMP",
+      "version": "6.2.1",
+      "path": "native/gmp-6.2.1.tar.xz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/gmp-6.2.1.tar.xz",
+      "status": "verified",
+      "sha256": "fd4829912cddd12f84181c3451cc752be224643e87fac497b69edddadc49b4f2",
+      "bytes": 2027316
+    },
+    {
+      "name": "Blender-HIPRT",
+      "version": "83e18cc9c3de8f2f9c48b663cf3189361e891054",
+      "path": "native/hiprt-83e18cc9c3de8f2f9c48b663cf3189361e891054.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/hiprt-83e18cc9c3de8f2f9c48b663cf3189361e891054.tar.gz",
+      "status": "verified",
+      "sha256": "2402f01754708f8dade04a25a65b3624a7fb95c15e8b3479e93c9c21ed40f95b",
+      "bytes": 33363991
+    },
+    {
+      "name": "Blender-ICDLOADER",
+      "version": "9a3e962f16f5097d2054233ad8b6dad51b6f41b7",
+      "path": "native/icdloader-9a3e962f16f5097d2054233ad8b6dad51b6f41b7.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/icdloader-9a3e962f16f5097d2054233ad8b6dad51b6f41b7.tar.gz",
+      "status": "verified",
+      "sha256": "5e2979be5692caf11a4afc2fd7995a54c94a03d0f7ee2959f03f98f7689b677b",
+      "bytes": 89887
+    },
+    {
+      "name": "Blender-IGC",
+      "version": "1.0.17384.29",
+      "path": "native/igc-1.0.17384.29.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/igc-1.0.17384.29.tar.gz",
+      "status": "verified",
+      "sha256": "de7b1ba9cb1369f9aa26343bb4ad1ac7e5cb5f9f4517071f25d853e46cae6195",
+      "bytes": 10463118
+    },
+    {
+      "name": "Blender-IMATH",
+      "version": "3.1.7",
+      "path": "native/imath-3.1.7.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/imath-3.1.7.tar.gz",
+      "status": "verified",
+      "sha256": "bff1fa140f4af0e7f02c6cb78d41b9a7d5508e6bcdfda3a583e35460eb6d4b47",
+      "bytes": 583049
+    },
+    {
+      "name": "Blender-GMMLIB",
+      "version": "intel-gmmlib-22.4.1",
+      "path": "native/intel-gmmlib-22.4.1.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/intel-gmmlib-22.4.1.tar.gz",
+      "status": "verified",
+      "sha256": "451fbe2eac26533a896ca0da0356354ecc38680f273fce7d121c6a22251ed21e",
+      "bytes": 867162
+    },
+    {
+      "name": "Blender-JEMALLOC",
+      "version": "5.2.1",
+      "path": "native/jemalloc-5.2.1.tar.bz2",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/jemalloc-5.2.1.tar.bz2",
+      "status": "verified",
+      "sha256": "34330e5ce276099e2e8950d9335db5a875689a4c6a56751ef3b1d8c537f887f6",
+      "bytes": 554279
+    },
+    {
+      "name": "Blender-LAME",
+      "version": "3.100",
+      "path": "native/lame-3.100.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/lame-3.100.tar.gz",
+      "status": "verified",
+      "sha256": "ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e",
+      "bytes": 1524133
+    },
+    {
+      "name": "Blender-LEVEL_ZERO",
+      "version": "1.16.1",
+      "path": "native/level-zero-1.16.1.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/level-zero-1.16.1.tar.gz",
+      "status": "verified",
+      "sha256": "f341dd6355d8da6ee9c29031642b8e8e4259f91c13c72d318c81663af048817e",
+      "bytes": 999641
+    },
+    {
+      "name": "Blender-AOM",
+      "version": "3.4.0",
+      "path": "native/libaom-3.4.0.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/libaom-3.4.0.tar.gz",
+      "status": "verified",
+      "sha256": "bd754b58c3fa69f3ffd29da77de591bd9c26970e3b18537951336d6c0252e354",
+      "bytes": 5175838
+    },
+    {
+      "name": "Blender-WAYLAND_LIBDECOR",
+      "version": "0.2.2",
+      "path": "native/libdecor-0.2.2.tar.xz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/libdecor-0.2.2.tar.xz",
+      "status": "verified",
+      "sha256": "16a288e24354d461b20dda9cf38e68543569134f04e4b7fa2914aa647907dfac",
+      "bytes": 44988
+    },
+    {
+      "name": "Blender-DEFLATE",
+      "version": "1.18",
+      "path": "native/libdeflate-v1.18.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/libdeflate-v1.18.tar.gz",
+      "status": "verified",
+      "sha256": "225d982bcaf553221c76726358d2ea139bb34913180b20823c782cede060affd",
+      "bytes": 184924
+    },
+    {
+      "name": "Blender-EPOXY",
+      "version": "1.5.10",
+      "path": "native/libepoxy-1.5.10.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/libepoxy-1.5.10.tar.gz",
+      "status": "verified",
+      "sha256": "a7ced37f4102b745ac86d6a70a9da399cc139ff168ba6b8002b4d8d43c900c15",
+      "bytes": 332078
+    },
+    {
+      "name": "Blender-EXPAT",
+      "version": "2_5_0",
+      "path": "native/libexpat-2_5_0.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/libexpat-2_5_0.tar.gz",
+      "status": "verified",
+      "sha256": "ab00ee05c7067fd10a35c5d2a4922ebba746ddd50ff83b79c828da17bbdf1757",
+      "bytes": 8320988
+    },
+    {
+      "name": "Blender-FFI",
+      "version": "3.4.4",
+      "path": "native/libffi-3.4.4.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/libffi-3.4.4.tar.gz",
+      "status": "verified",
+      "sha256": "d66c56ad259a82cf2a9dfc408b32bf5da52371500b84745f7fb8b645712df676",
+      "bytes": 1362394
+    },
+    {
+      "name": "Blender-HARU",
+      "version": "2_3_0",
+      "path": "native/libharu-2_3_0.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/libharu-2_3_0.tar.gz",
+      "status": "verified",
+      "sha256": "8f9e68cc5d5f7d53d1bc61a1ed876add1faf4f91070dbc360d8b259f46d9a4d2",
+      "bytes": 1396413
+    },
+    {
+      "name": "Blender-ICONV",
+      "version": "1.16",
+      "path": "native/libiconv-1.16.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/libiconv-1.16.tar.gz",
+      "status": "verified",
+      "sha256": "e6a1b1b589654277ee790cce3734f07876ac4ccfaecbee8afa0b649cf529cc04",
+      "bytes": 5166734
+    },
+    {
+      "name": "Blender-JPEG",
+      "version": "2.1.3",
+      "path": "native/libjpeg-turbo-2.1.3.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/libjpeg-turbo-2.1.3.tar.gz",
+      "status": "verified",
+      "sha256": "dbda0c685942aa3ea908496592491e5ec8160d2cf1ec9d5fd5470e50768e7859",
+      "bytes": 2260756
+    },
+    {
+      "name": "Blender-OGG",
+      "version": "1.3.5",
+      "path": "native/libogg-1.3.5.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/libogg-1.3.5.tar.gz",
+      "status": "verified",
+      "sha256": "0eb4b4b9420a0f51db142ba3f9c64b333f826532dc0f48c6410ae51f4799b664",
+      "bytes": 593071
+    },
+    {
+      "name": "Blender-PNG",
+      "version": "1.6.43",
+      "path": "native/libpng-1.6.43.tar.xz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/libpng-1.6.43.tar.xz",
+      "status": "verified",
+      "sha256": "6a5ca0652392a2d7c9db2ae5b40210843c0bbc081cbd410825ab00cc59f14a6c",
+      "bytes": 1044076
+    },
+    {
+      "name": "Blender-SNDFILE",
+      "version": "1.2.2",
+      "path": "native/libsndfile-1.2.2.tar.xz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/libsndfile-1.2.2.tar.xz",
+      "status": "verified",
+      "sha256": "3799ca9924d3125038880367bf1468e53a1b7e3686a934f098b7e1d286cdb80e",
+      "bytes": 730760
+    },
+    {
+      "name": "Blender-SPNAV",
+      "version": "1.1",
+      "path": "native/libspnav-1.1.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/libspnav-1.1.tar.gz",
+      "status": "verified",
+      "sha256": "04b297f68a10db4fa40edf68d7f823ba7b9d0442f2b665181889abe2cea42759",
+      "bytes": 31574
+    },
+    {
+      "name": "Blender-THEORA",
+      "version": "1.1.1",
+      "path": "native/libtheora-1.1.1.tar.bz2",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/libtheora-1.1.1.tar.bz2",
+      "status": "verified",
+      "sha256": "b6ae1ee2fa3d42ac489287d3ec34c5885730b1296f0801ae577a35193d3affbc",
+      "bytes": 1903175
+    },
+    {
+      "name": "Blender-VORBIS",
+      "version": "1.3.7",
+      "path": "native/libvorbis-1.3.7.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/libvorbis-1.3.7.tar.gz",
+      "status": "verified",
+      "sha256": "0e982409a9c3fc82ee06e08205b1355e5c6aa4c36bca58146ef399621b0ce5ab",
+      "bytes": 1658963
+    },
+    {
+      "name": "Blender-VPX",
+      "version": "1.14.0",
+      "path": "native/libvpx-v1.14.0.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/libvpx-v1.14.0.tar.gz",
+      "status": "verified",
+      "sha256": "5f21d2db27071c8a46f1725928a10227ae45c5cd1cad3727e4aafbe476e321fa",
+      "bytes": 5606471
+    },
+    {
+      "name": "Blender-WEBP",
+      "version": "1.3.2",
+      "path": "native/libwebp-1.3.2.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/libwebp-1.3.2.tar.gz",
+      "status": "verified",
+      "sha256": "2a499607df669e40258e53d0ade8035ba4ec0175244869d1025d460562aa09b4",
+      "bytes": 4162949
+    },
+    {
+      "name": "Blender-XML2",
+      "version": "2.12.3",
+      "path": "native/libxml2-2.12.3.tar.xz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/libxml2-2.12.3.tar.xz",
+      "status": "verified",
+      "sha256": "8c8f1092340a89ff32bc44ad5c9693aff9bc8a7a3e161bb239666e5d15ac9aaa",
+      "bytes": 2641720
+    },
+    {
+      "name": "Blender-LLVM",
+      "version": "17.0.6",
+      "path": "native/llvm-project-17.0.6.src.tar.xz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/llvm-project-17.0.6.src.tar.xz",
+      "status": "verified",
+      "sha256": "58a8818c60e6627064f312dbf46c02d9949956558340938b71cf731ad8bc0813",
+      "bytes": 127838860
+    },
+    {
+      "name": "Blender-IGC_LLVM",
+      "version": "llvmorg-14.0.5",
+      "path": "native/llvmorg-14.0.5.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/llvmorg-14.0.5.tar.gz",
+      "status": "verified",
+      "sha256": "a4a57f029cb81f04618e05853f05fc2d21b64353c760977d8e7799bf7218a23a",
+      "bytes": 158106594
+    },
+    {
+      "name": "Blender-MATERIALX",
+      "version": "1.38.8",
+      "path": "native/materialx-v1.38.8.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/materialx-v1.38.8.tar.gz",
+      "status": "verified",
+      "sha256": "d69762f8fb132c6935365d7ec30e07cc3fcfd9410005d277a59d3266d4990a0a",
+      "bytes": 116562826
+    },
+    {
+      "name": "Blender-MESA",
+      "version": "23.3.0",
+      "path": "native/mesa-23.3.0.tar.xz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/mesa-23.3.0.tar.xz",
+      "status": "verified",
+      "sha256": "50f729dd60ed6335b989095baad81ef5edf7cfdd4b4b48b9b955917cb07d69c5",
+      "bytes": 19234688
+    },
+    {
+      "name": "Blender-MINIZIPNG",
+      "version": "3.0.7",
+      "path": "native/minizip-ng-3.0.7.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/minizip-ng-3.0.7.tar.gz",
+      "status": "verified",
+      "sha256": "39981a0db1bb6da504909bce63d7493286c5e50825c056564544c990d15c55cf",
+      "bytes": 643065
+    },
+    {
+      "name": "Blender-MP11",
+      "version": "ef7608b463298b881bc82eae4f45a4385ed74fca",
+      "path": "native/mp11-ef7608b463298b881bc82eae4f45a4385ed74fca.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/mp11-ef7608b463298b881bc82eae4f45a4385ed74fca.tar.gz",
+      "status": "verified",
+      "sha256": "ec2d68858dd4d04f9a1e3960fc94a58440715e1b3e746cc495438116715343e2",
+      "bytes": 121948
+    },
+    {
+      "name": "Blender-NUMPY",
+      "version": "1.24.3",
+      "path": "native/numpy-1.24.3.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/numpy-1.24.3.tar.gz",
+      "status": "verified",
+      "sha256": "ab344f1bf21f140adab8e47fdbc7c35a477dc01408791f8ba00d018dd0bc5155",
+      "bytes": 10909904
+    },
+    {
+      "name": "Blender-OCLOC",
+      "version": "24.31.30508.9",
+      "path": "native/ocloc-24.31.30508.9.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/ocloc-24.31.30508.9.tar.gz",
+      "status": "verified",
+      "sha256": "7c2b5708e996fc9e61997f1821d9be1e0fd43c9f29cfe3fea383a01d9aa92868",
+      "bytes": 7323354
+    },
+    {
+      "name": "Blender-OIDN",
+      "version": "2.3.0",
+      "path": "native/oidn-2.3.0.src.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/oidn-2.3.0.src.tar.gz",
+      "status": "verified",
+      "sha256": "cce3010962ec84e0ba1acd8c9055a3d8de402fedb1b463517cfeb920a276e427",
+      "bytes": 75300547
+    },
+    {
+      "name": "Blender-TBB",
+      "version": "2020_U3",
+      "path": "native/oneTBB-2020_U3.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/oneTBB-2020_U3.tar.gz",
+      "status": "verified",
+      "sha256": "2103cc6238c935664f87680618f6684d57501d4a2fa8ea8f6c97ad6ff7dc722a",
+      "bytes": 2639788
+    },
+    {
+      "name": "Blender-OPENAL",
+      "version": "1.23.1",
+      "path": "native/openal-soft-1.23.1.tar.bz2",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/openal-soft-1.23.1.tar.bz2",
+      "status": "verified",
+      "sha256": "796f4b89134c4e57270b7f0d755f0fa3435b90da437b745160a49bd41c845b21",
+      "bytes": 699330
+    },
+    {
+      "name": "Blender-IGC_OPENCL_CLANG",
+      "version": "470cf0018e1ef6fc92eda1356f5f31f7da452abc",
+      "path": "native/opencl-clang-470cf0018e1ef6fc92eda1356f5f31f7da452abc.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/opencl-clang-470cf0018e1ef6fc92eda1356f5f31f7da452abc.tar.gz",
+      "status": "verified",
+      "sha256": "fa410e0b4cc5b3fc3262e3b6aaace3543207a20ecd004f48dfec9a970f1fe4e2",
+      "bytes": 42523
+    },
+    {
+      "name": "Blender-OPENCLHEADERS",
+      "version": "9ddb236e6eb3cf844f9e2f81677e1045f9bf838e",
+      "path": "native/opencl_headers-9ddb236e6eb3cf844f9e2f81677e1045f9bf838e.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/opencl_headers-9ddb236e6eb3cf844f9e2f81677e1045f9bf838e.tar.gz",
+      "status": "verified",
+      "sha256": "9db682a1b0037ef54c50ba8fa3fa73182e552fc1ad0119a771bebf68e43ea739",
+      "bytes": 66517
+    },
+    {
+      "name": "Blender-OPENCOLLADA",
+      "version": "dfc341ab0b3b23ee307ab8660c0213e64da1eac6",
+      "path": "native/opencollada-dfc341ab0b3b23ee307ab8660c0213e64da1eac6.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/opencollada-dfc341ab0b3b23ee307ab8660c0213e64da1eac6.tar.gz",
+      "status": "verified",
+      "sha256": "db8510c39683e01646fa62f1f875b313c9a60539fff2e813d0af565250d5e55c",
+      "bytes": 2547807
+    },
+    {
+      "name": "Blender-OPENCOLORIO",
+      "version": "2.3.2",
+      "path": "native/OpenColorIO-2.3.2.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/OpenColorIO-2.3.2.tar.gz",
+      "status": "verified",
+      "sha256": "6bbf4e7fa4ea2f743a238cb22aff44890425771a2f57f62cece1574e46ceec2f",
+      "bytes": 11443450
+    },
+    {
+      "name": "Blender-OPENEXR",
+      "version": "3.2.4",
+      "path": "native/openexr-3.2.4.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/openexr-3.2.4.tar.gz",
+      "status": "verified",
+      "sha256": "81e6518f2c4656fdeaf18a018f135e96a96e7f66dbe1c1f05860dd94772176cc",
+      "bytes": 18856440
+    },
+    {
+      "name": "Blender-OPENIMAGEIO",
+      "version": "v2.5.11.0",
+      "path": "native/OpenImageIO-v2.5.11.0.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/OpenImageIO-v2.5.11.0.tar.gz",
+      "status": "verified",
+      "sha256": "ebf1945e36679be55519d9f42a8f029c4a53d4efb4aaee3b10af6cdc93fb614b",
+      "bytes": 52534320
+    },
+    {
+      "name": "Blender-OPENJPEG",
+      "version": "2.5.0",
+      "path": "native/openjpeg-v2.5.0.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/openjpeg-v2.5.0.tar.gz",
+      "status": "verified",
+      "sha256": "0333806d6adecc6f7a91243b2b839ff4d2053823634d4f6ed7a59bc87409122a",
+      "bytes": 1867111
+    },
+    {
+      "name": "Blender-OPENPGL",
+      "version": "v0.6.0",
+      "path": "native/openpgl-v0.6.0.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/openpgl-v0.6.0.tar.gz",
+      "status": "verified",
+      "sha256": "4192a4096ee3e3d31878cd013f8de23418c8037c576537551f946c4811931c5e",
+      "bytes": 10824550
+    },
+    {
+      "name": "Blender-OSL",
+      "version": "1.13.7.0",
+      "path": "native/OpenShadingLanguage-1.13.7.0.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/OpenShadingLanguage-1.13.7.0.tar.gz",
+      "status": "verified",
+      "sha256": "56ea21310e9e5417c34535a630c096a4a260cd614655fee567e0e45559f7f248",
+      "bytes": 21774349
+    },
+    {
+      "name": "Blender-SSL",
+      "version": "3.1.5",
+      "path": "native/openssl-3.1.5.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/openssl-3.1.5.tar.gz",
+      "status": "verified",
+      "sha256": "6ae015467dabf0469b139ada93319327be24b98251ffaeceda0221848dc09262",
+      "bytes": 15663524
+    },
+    {
+      "name": "Blender-OPENSUBDIV",
+      "version": "v3_6_0",
+      "path": "native/opensubdiv-v3_6_0.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/opensubdiv-v3_6_0.tar.gz",
+      "status": "verified",
+      "sha256": "bebfd61ab6657a4f4ff27845fb66a167d00395783bfbd253254d87447ed1d879",
+      "bytes": 40746688
+    },
+    {
+      "name": "Blender-OPENVDB",
+      "version": "11.0.0",
+      "path": "native/openvdb-11.0.0.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/openvdb-11.0.0.tar.gz",
+      "status": "verified",
+      "sha256": "6314ff1db057ea90050763e7b7d7ed86d8224fcd42a82cdbb9c515e001b96c74",
+      "bytes": 4620858
+    },
+    {
+      "name": "Blender-XR_OPENXR_SDK",
+      "version": "1.0.22",
+      "path": "native/OpenXR-SDK-1.0.22.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/OpenXR-SDK-1.0.22.tar.gz",
+      "status": "verified",
+      "sha256": "fe84446c0e8d87f0bea0bfec20c6b38d8eb7de811006eada1f50f43b2d5b8f59",
+      "bytes": 537728
+    },
+    {
+      "name": "Blender-OPUS",
+      "version": "1.3.1",
+      "path": "native/opus-1.3.1.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/opus-1.3.1.tar.gz",
+      "status": "verified",
+      "sha256": "65b58e1e25b2a114157014736a3d9dfeaad8d41be1c8179866f144a2fb44ff9d",
+      "bytes": 1040054
+    },
+    {
+      "name": "Blender-POTRACE",
+      "version": "1.16",
+      "path": "native/potrace-1.16.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/potrace-1.16.tar.gz",
+      "status": "verified",
+      "sha256": "be8248a17dedd6ccbaab2fcc45835bb0502d062e40fbded3bc56028ce5eb7acc",
+      "bytes": 657314
+    },
+    {
+      "name": "Blender-PTHREADS",
+      "version": "3.0.0",
+      "path": "native/pthreads4w-code-3.0.0.zip",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/pthreads4w-code-3.0.0.zip",
+      "status": "verified",
+      "sha256": "b81136effb7185c77601fe2e0e6ac19bd996912e4814cebdd3010b0fac9e259b",
+      "bytes": 862409
+    },
+    {
+      "name": "Blender-PUGIXML",
+      "version": "1.10",
+      "path": "native/pugixml-1.10.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/pugixml-1.10.tar.gz",
+      "status": "verified",
+      "sha256": "10f1f0a32b559ca8435d95855928d990cfbb9796e339efb638080c897728174c",
+      "bytes": 562718
+    },
+    {
+      "name": "Blender-PYBIND11",
+      "version": "2.10.1",
+      "path": "native/pybind-v2.10.1.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/pybind-v2.10.1.tar.gz",
+      "status": "verified",
+      "sha256": "111014b516b625083bef701df7880f78c2243835abdb263065b6b59b960b6bad",
+      "bytes": 727880
+    },
+    {
+      "name": "Blender-PYSTRING",
+      "version": "v1.1.3",
+      "path": "native/pystring-v1.1.3.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/pystring-v1.1.3.tar.gz",
+      "status": "verified",
+      "sha256": "358a56e756e701836b69a31c75d3d9d41c34d447cf7b3775bbd5620dcd3203d9",
+      "bytes": 18364
+    },
+    {
+      "name": "Blender-PYTHON",
+      "version": "3.11.9",
+      "path": "native/Python-3.11.9.tar.xz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/Python-3.11.9.tar.xz",
+      "status": "verified",
+      "sha256": "9b1e896523fc510691126c864406d9360a3d1e986acbda59cda57b5abda45b87",
+      "bytes": 20175816
+    },
+    {
+      "name": "Blender-ROBINMAP",
+      "version": "v0.6.2",
+      "path": "native/robinmap-v0.6.2.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/robinmap-v0.6.2.tar.gz",
+      "status": "verified",
+      "sha256": "c08ec4b1bf1c85eb0d6432244a6a89862229da1cb834f3f90fba8dc35d8c8ef1",
+      "bytes": 63782
+    },
+    {
+      "name": "Blender-SDL",
+      "version": "2.28.2",
+      "path": "native/SDL2-2.28.2.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/SDL2-2.28.2.tar.gz",
+      "status": "verified",
+      "sha256": "64b1102fa22093515b02ef33dd8739dee1ba57e9dbba6a092942b8bbed1a1c5e",
+      "bytes": 7341117
+    },
+    {
+      "name": "Blender-SHADERC",
+      "version": "v2022.3",
+      "path": "native/shaderc-v2022.3.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/shaderc-v2022.3.tar.gz",
+      "status": "verified",
+      "sha256": "c1dee49535cfdf86994990b21fe129a74bb0d628a647f4aae8905bd61df32607",
+      "bytes": 223478
+    },
+    {
+      "name": "Blender-SPIRV_HEADERS",
+      "version": "b73e168ca5e123dcf3dea8a34b19a5130f421ae1",
+      "path": "native/SPIR-V-Headers-b73e168ca5e123dcf3dea8a34b19a5130f421ae1.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/SPIR-V-Headers-b73e168ca5e123dcf3dea8a34b19a5130f421ae1.tar.gz",
+      "status": "verified",
+      "sha256": "11d835c60297b26532c05c3f3b581ba7a2787b5ae7399e94f72c392169216f11",
+      "bytes": 471542
+    },
+    {
+      "name": "Blender-IGC_SPIRV_HEADERS",
+      "version": "vulkan-sdk-1.3.275.0",
+      "path": "native/SPIR-V-Headers-vulkan-sdk-1.3.275.0.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/SPIR-V-Headers-vulkan-sdk-1.3.275.0.tar.gz",
+      "status": "verified",
+      "sha256": "d46b261f1fbc5e85022cb2fada9a6facb5b0c9932b45007a77fe05639a605bd1",
+      "bytes": 466358
+    },
+    {
+      "name": "Blender-IGC_SPIRV_TOOLS",
+      "version": "v2023.6.rc1",
+      "path": "native/SPIR-V-Tools-v2023.6.rc1.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/SPIR-V-Tools-v2023.6.rc1.tar.gz",
+      "status": "verified",
+      "sha256": "750e4bfcaccd636fb04dd912b668a8a6d29940f8f83b7d9a266170b1023a1a89",
+      "bytes": 3151486
+    },
+    {
+      "name": "Blender-IGC_SPIRV_TRANSLATOR",
+      "version": "2823e7052b7999c10fff63bc8089e5aa205716f4",
+      "path": "native/SPIR-V-Translator-2823e7052b7999c10fff63bc8089e5aa205716f4.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/SPIR-V-Translator-2823e7052b7999c10fff63bc8089e5aa205716f4.tar.gz",
+      "status": "verified",
+      "sha256": "39eb3e033a0a1f5c69622d6a0b87e296b4e090d2f613f1014ee6fedcc2d3ca83",
+      "bytes": 1597127
+    },
+    {
+      "name": "Blender-SHADERC_SPIRV_HEADERS",
+      "version": "85a1ed200d50660786c1a88d9166e871123cce39",
+      "path": "native/SPIRV-Headers-85a1ed200d50660786c1a88d9166e871123cce39.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/SPIRV-Headers-85a1ed200d50660786c1a88d9166e871123cce39.tar.gz",
+      "status": "verified",
+      "sha256": "9729304d0915e758c5ea2a1c60b55a123d976f172c0a8dae3162ad23c77ef33b",
+      "bytes": 440195
+    },
+    {
+      "name": "Blender-SHADERC_SPIRV_TOOLS",
+      "version": "eb0a36633d2acf4de82588504f951ad0f2cecacb",
+      "path": "native/SPIRV-Tools-eb0a36633d2acf4de82588504f951ad0f2cecacb.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/SPIRV-Tools-eb0a36633d2acf4de82588504f951ad0f2cecacb.tar.gz",
+      "status": "verified",
+      "sha256": "9f7c423c9dad6c9e664e0600226646232a328051f73f30d6795360370aa06a2f",
+      "bytes": 3047918
+    },
+    {
+      "name": "Blender-SQLITE",
+      "version": "3.45.1",
+      "path": "native/sqlite-autoconf-3450100.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/sqlite-autoconf-3450100.tar.gz",
+      "status": "verified",
+      "sha256": "cd9c27841b7a5932c9897651e20b86c701dd740556989b01ca596fcfa3d49a0a",
+      "bytes": 3232682
+    },
+    {
+      "name": "Blender-SSE2NEON",
+      "version": "227cc413fb2d50b2a10073087be96b59d5364aea",
+      "path": "native/sse2neon-227cc413fb2d50b2a10073087be96b59d5364aea.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/sse2neon-227cc413fb2d50b2a10073087be96b59d5364aea.tar.gz",
+      "status": "verified",
+      "sha256": "3427a495743bb6fd1b5f9f806b80f57d67b1ac7ccf39a5f44aedd487fd7e6da1",
+      "bytes": 136342
+    },
+    {
+      "name": "Blender-TIFF",
+      "version": "4.6.0",
+      "path": "native/tiff-4.6.0.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/tiff-4.6.0.tar.gz",
+      "status": "verified",
+      "sha256": "88b3979e6d5c7e32b50d7ec72fb15af724f6ab2cbf7e10880c360a77e4b5d99a",
+      "bytes": 3584534
+    },
+    {
+      "name": "Blender-UNIFIED_MEMORY_FRAMEWORK",
+      "version": "9bf7a0dc4dff76844e10edbb5c6e9d917536ef6d",
+      "path": "native/unified-memory-framework-9bf7a0dc4dff76844e10edbb5c6e9d917536ef6d.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/unified-memory-framework-9bf7a0dc4dff76844e10edbb5c6e9d917536ef6d.tar.gz",
+      "status": "verified",
+      "sha256": "7ff7d0be7be6e59693d238eab02b5a9741c820d3d995446781dcd7a2adaa28e9",
+      "bytes": 111736
+    },
+    {
+      "name": "Blender-UNIFIED_RUNTIME",
+      "version": "ec634ff05b067d7922ec45059dda94665e5dcd9b",
+      "path": "native/unified-runtime-ec634ff05b067d7922ec45059dda94665e5dcd9b.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/unified-runtime-ec634ff05b067d7922ec45059dda94665e5dcd9b.tar.gz",
+      "status": "verified",
+      "sha256": "ff15574aba6225d0c8a32f71866126551dee1aaacfa7894b8fdcc5e52e0f5da9",
+      "bytes": 1195474
+    },
+    {
+      "name": "Blender-USD",
+      "version": "24.05",
+      "path": "native/usd-v24.05.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/usd-v24.05.tar.gz",
+      "status": "verified",
+      "sha256": "0352619895588efc8f9d4aa7004c92be4e4fa70e1ccce77e474ce23941c05828",
+      "bytes": 125139666
+    },
+    {
+      "name": "Blender-VCINTRINSICS",
+      "version": "da892e1982b6c25b9a133f85b4ac97142d8a3def",
+      "path": "native/vc-intrinsics-da892e1982b6c25b9a133f85b4ac97142d8a3def.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/vc-intrinsics-da892e1982b6c25b9a133f85b4ac97142d8a3def.tar.gz",
+      "status": "verified",
+      "sha256": "06b85bd988059939770eb6e6e6194562d17c5f5a5df9947af18696b3b1fe92f3",
+      "bytes": 144560
+    },
+    {
+      "name": "Blender-IGC_VCINTRINSICS",
+      "version": "v0.19.0",
+      "path": "native/vc-intrinsics-v0.19.0.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/vc-intrinsics-v0.19.0.tar.gz",
+      "status": "verified",
+      "sha256": "b708df2fddc9fcb2cac5d6f26870f2e105f8395c0208ecd8acc38cbf175aee52",
+      "bytes": 146538
+    },
+    {
+      "name": "Blender-VULKAN_HEADERS",
+      "version": "v1.3.270",
+      "path": "native/Vulkan-Headers-v1.3.270.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/Vulkan-Headers-v1.3.270.tar.gz",
+      "status": "verified",
+      "sha256": "908e4e3881df8003744279ebdb0acd195c35d3792b2855e5488871956f90a7ee",
+      "bytes": 2161873
+    },
+    {
+      "name": "Blender-VULKAN_LOADER",
+      "version": "v1.3.270",
+      "path": "native/Vulkan-Loader-v1.3.270.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/Vulkan-Loader-v1.3.270.tar.gz",
+      "status": "verified",
+      "sha256": "464293bd8be1545365518327168c676aadab7a88fa516054cd59fb3f6f83a1d5",
+      "bytes": 1695913
+    },
+    {
+      "name": "Blender-WAYLAND",
+      "version": "1.23.0",
+      "path": "native/wayland-1.23.0.tar.xz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/wayland-1.23.0.tar.xz",
+      "status": "verified",
+      "sha256": "05b3e1574d3e67626b5974f862f36b5b427c7ceeb965cb36a4e6c2d342e45ab2",
+      "bytes": 237900
+    },
+    {
+      "name": "Blender-WL_PROTOCOLS",
+      "version": "1.36",
+      "path": "native/wayland-protocols-1.36.tar.xz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/wayland-protocols-1.36.tar.xz",
+      "status": "verified",
+      "sha256": "71fd4de05e79f9a1ca559fac30c1f8365fa10346422f9fe795f74d77b9ef7e92",
+      "bytes": 95512
+    },
+    {
+      "name": "Blender-WAYLAND_WESTON",
+      "version": "13.0.3",
+      "path": "native/weston-13.0.3.tar.xz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/weston-13.0.3.tar.xz",
+      "status": "verified",
+      "sha256": "27f68d96e3b97d98daadef13a202356524924fa381418fa6716b9136ef099093",
+      "bytes": 1986952
+    },
+    {
+      "name": "Blender-X264",
+      "version": "35fe20d1ba49918ec739a5b068c208ca82f977f7",
+      "path": "native/x264-35fe20d1ba49918ec739a5b068c208ca82f977f7.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/x264-35fe20d1ba49918ec739a5b068c208ca82f977f7.tar.gz",
+      "status": "verified",
+      "sha256": "bb4f7da03936b5a030ed5827133b58eb3f701d7e5dce32cca4ba6df93797d42e",
+      "bytes": 942991
+    },
+    {
+      "name": "Blender-X265",
+      "version": "3cf6c1e53037eb9e198860365712e1bafb22f7c6",
+      "path": "native/x265-3cf6c1e53037eb9e198860365712e1bafb22f7c6.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/x265-3cf6c1e53037eb9e198860365712e1bafb22f7c6.tar.gz",
+      "status": "verified",
+      "sha256": "40d12016192cdc740132cb00dd6cc80ead094ff91a1a897181256def2011342e",
+      "bytes": 1655386
+    },
+    {
+      "name": "Blender-LZMA",
+      "version": "5.2.5",
+      "path": "native/xz-5.2.5.tar.bz2",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/xz-5.2.5.tar.bz2",
+      "status": "verified",
+      "sha256": "5117f930900b341493827d63aa910ff5e011e0b994197c3b71c08a20228a42df",
+      "bytes": 1473322
+    },
+    {
+      "name": "Blender-YAMLCPP",
+      "version": "0.7.0",
+      "path": "native/yaml-cpp-0.7.0.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/yaml-cpp-0.7.0.tar.gz",
+      "status": "verified",
+      "sha256": "43e6a9fcb146ad871515f0d0873947e5d497a1c9c60c58cb102a97b47208b7c3",
+      "bytes": 1033237
+    },
+    {
+      "name": "Blender-ZLIB",
+      "version": "1.2.13",
+      "path": "native/zlib-1.2.13.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/zlib-1.2.13.tar.gz",
+      "status": "verified",
+      "sha256": "b3a24de97a8fdbc835b9833169501030b8977031bcb54b3b3ac13740f846ab30",
+      "bytes": 1497445
+    },
+    {
+      "name": "Blender-ZSTD",
+      "version": "1.5.0",
+      "path": "native/zstd-1.5.0.tar.gz",
+      "url": "https://projects.blender.org/blender/lib-source/media/branch/blender-v4.3-release/zstd-1.5.0.tar.gz",
+      "status": "verified",
+      "sha256": "5194fbfa781fcf45b98c5e849651aa7b3b0a008c6b72d4a0db760f3002291e94",
+      "bytes": 1851389
+    },
+    {
+      "name": "numpy",
+      "version": "2.2.6",
+      "path": "numpy-2.2.6.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/76/21/7d2a95e4bba9dc13d043ee156a356c0a8f0c6309dff6b21b4d71a073b8a8/numpy-2.2.6.tar.gz",
+      "status": "verified",
+      "sha256": "e29554e2bef54a90aa5cc07da6ce955accb83f21ab5de01a62c8478897b264fd",
+      "bytes": 20276440
+    },
+    {
+      "name": "opencv-python",
+      "version": "4.10.0.84",
+      "path": "opencv-python-4.10.0.84.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/4a/e7/b70a2d9ab205110d715906fc8ec83fbb00404aeb3a37a0654fdb68eb0c8c/opencv-python-4.10.0.84.tar.gz",
+      "status": "verified",
+      "sha256": "72d234e4582e9658ffea8e9cae5b63d488ad06994ef12d81dc303b17472f3526",
+      "bytes": 95103981
+    },
+    {
+      "name": "openpyxl",
+      "version": "3.1.5",
+      "path": "openpyxl-3.1.5.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/3d/f9/88d94a75de065ea32619465d2f77b29a0469500e99012523b91cc4141cd1/openpyxl-3.1.5.tar.gz",
+      "status": "verified",
+      "sha256": "cf0e3cf56142039133628b5acffe8ef0c12bc902d2aadd3e0fe5878dc08d1050",
+      "bytes": 186464
+    },
+    {
+      "name": "packaging",
+      "version": "26.2",
+      "path": "packaging-26.2.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/d7/f1/e7a6dd94a8d4a5626c03e4e99c87f241ba9e350cd9e6d75123f992427270/packaging-26.2.tar.gz",
+      "status": "verified",
+      "sha256": "ff452ff5a3e828ce110190feff1178bb1f2ea2281fa2075aadb987c2fb221661",
+      "bytes": 228134
+    },
+    {
+      "name": "pandas",
+      "version": "2.3.3",
+      "path": "pandas-2.3.3.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/33/01/d40b85317f86cf08d853a4f495195c73815fdf205eef3993821720274518/pandas-2.3.3.tar.gz",
+      "status": "verified",
+      "sha256": "e05e1af93b977f7eafa636d043f9f94c7ee3ac81af99c13508215942e64c993b",
+      "bytes": 4495223
+    },
+    {
+      "name": "pillow",
+      "version": "11.3.0",
+      "path": "pillow-11.3.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/f3/0d/d0d6dea55cd152ce3d6767bb38a8fc10e33796ba4ba210cbab9354b6d238/pillow-11.3.0.tar.gz",
+      "status": "verified",
+      "sha256": "3828ee7586cd0b2091b6209e5ad53e20d0649bbe87164a459d0676e035e8f523",
+      "bytes": 47113069
+    },
+    {
+      "name": "psutil",
+      "version": "7.2.2",
+      "path": "psutil-7.2.2.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/aa/c6/d1ddf4abb55e93cebc4f2ed8b5d6dbad109ecb8d63748dd2b20ab5e57ebe/psutil-7.2.2.tar.gz",
+      "status": "verified",
+      "sha256": "0746f5f8d406af344fd547f1c8daa5f5c33dbc293bb8d6a16d80b4bb88f59372",
+      "bytes": 493740
+    },
+    {
+      "name": "pycparser",
+      "version": "3.0",
+      "path": "pycparser-3.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/1b/7d/92392ff7815c21062bea51aa7b87d45576f649f16458d78b7cf94b9ab2e6/pycparser-3.0.tar.gz",
+      "status": "verified",
+      "sha256": "600f49d217304a5902ac3c37e1281c9fe94e4d0489de643a9504c5cdfdfc6b29",
+      "bytes": 103492
+    },
+    {
+      "name": "Pygments",
+      "version": "2.20.0",
+      "path": "pygments-2.20.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/c3/b2/bc9c9196916376152d655522fdcebac55e66de6603a76a02bca1b6414f6c/pygments-2.20.0.tar.gz",
+      "status": "verified",
+      "sha256": "6757cd03768053ff99f3039c1a36d6c0aa0b263438fcab17520b30a303a82b5f",
+      "bytes": 4955991
+    },
+    {
+      "name": "pyinstaller",
+      "version": "6.18.0",
+      "path": "pyinstaller-6.18.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/9f/b8/0fe3359920b0a4e7008e0e93ff383003763e3eee3eb31a07c52868722960/pyinstaller-6.18.0.tar.gz",
+      "status": "verified",
+      "sha256": "cdc507542783511cad4856fce582fdc37e9f29665ca596889c663c83ec8c6ec9",
+      "bytes": 4034976
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.2.3",
+      "path": "pyparsing-3.2.3.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/bb/22/f1129e69d94ffff626bdb5c835506b3a5b4f3d070f17ea295e12c2c6f60f/pyparsing-3.2.3.tar.gz",
+      "status": "verified",
+      "sha256": "b9c13f1ab8b3b542f72e28f634bad4de758ab3ce4546e4301970ad6fa77c38be",
+      "bytes": 1088608
+    },
+    {
+      "name": "QtForPython",
+      "version": "6.10.2",
+      "path": "pyside-setup-everywhere-src-6.10.2.tar.xz",
+      "url": "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.10.2-src/pyside-setup-everywhere-src-6.10.2.tar.xz",
+      "status": "verified",
+      "sha256": "05eec38bb71bffff8860786e3c0766cc4b86affc72439bd246c54889bdcb7400",
+      "bytes": 17877708
+    },
+    {
+      "name": "Python",
+      "version": "3.11.9",
+      "path": "Python-3.11.9.tar.xz",
+      "url": "https://www.python.org/ftp/python/3.11.9/Python-3.11.9.tar.xz",
+      "status": "verified",
+      "sha256": "9b1e896523fc510691126c864406d9360a3d1e986acbda59cda57b5abda45b87",
+      "bytes": 20175816
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "path": "python-dateutil-2.9.0.post0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz",
+      "status": "verified",
+      "sha256": "37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3",
+      "bytes": 342432
+    },
+    {
+      "name": "pytz",
+      "version": "2025.2",
+      "path": "pytz-2025.2.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/f8/bf/abbd3cdfb8fbc7fb3d4d38d320f2441b1e7cbe29be4f23797b4a2b5d8aac/pytz-2025.2.tar.gz",
+      "status": "verified",
+      "sha256": "360b9e3dbb49a209c21ad61809c7fb453643e048b38924c765813546746e81c3",
+      "bytes": 320884
+    },
+    {
+      "name": "pywin32",
+      "version": "311",
+      "path": "pywin32-b311.tar.gz",
+      "url": "https://github.com/mhammond/pywin32/archive/refs/tags/b311.tar.gz",
+      "status": "verified",
+      "sha256": "4ae3f0d4adacc331733fe1204f7f93b8654615ca325adfc9eb6c67198246a91b",
+      "bytes": 4753827
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "path": "pyyaml-6.0.3.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/05/8e/961c0007c59b8dd7729d542c61a4d537767a59645b82a0b521206e1e25c2/pyyaml-6.0.3.tar.gz",
+      "status": "verified",
+      "sha256": "d76623373421df22fb4cf8817020cbb7ef15c725b9d5e45f17e189bfc384190f",
+      "bytes": 130960
+    },
+    {
+      "name": "Qt",
+      "version": "6.10.2",
+      "path": "qt-everywhere-src-6.10.2.tar.xz",
+      "url": "https://download.qt.io/archive/qt/6.10/6.10.2/single/qt-everywhere-src-6.10.2.tar.xz",
+      "status": "verified",
+      "sha256": "c3df0f0e421130cc52ed81cb712358804471ce9bd2a41d97828f9f5b1bf7fed2",
+      "bytes": 1315359412
+    },
+    {
+      "name": "QtPy",
+      "version": "2.4.3",
+      "path": "qtpy-2.4.3.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/70/01/392eba83c8e47b946b929d7c46e0f04b35e9671f8bb6fc36b6f7945b4de8/qtpy-2.4.3.tar.gz",
+      "status": "verified",
+      "sha256": "db744f7832e6d3da90568ba6ccbca3ee2b3b4a890c3d6fbbc63142f6e4cdf5bb",
+      "bytes": 66982
+    },
+    {
+      "name": "referencing",
+      "version": "0.37.0",
+      "path": "referencing-0.37.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/22/f5/df4e9027acead3ecc63e50fe1e36aca1523e1719559c499951bb4b53188f/referencing-0.37.0.tar.gz",
+      "status": "verified",
+      "sha256": "44aefc3142c5b842538163acb373e24cce6632bd54bdb01b21ad5863489f50d8",
+      "bytes": 78036
+    },
+    {
+      "name": "requests",
+      "version": "2.32.5",
+      "path": "requests-2.32.5.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz",
+      "status": "verified",
+      "sha256": "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf",
+      "bytes": 134517
+    },
+    {
+      "name": "rpds-py",
+      "version": "0.30.0",
+      "path": "rpds_py-0.30.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/20/af/3f2f423103f1113b36230496629986e0ef7e199d2aa8392452b484b38ced/rpds_py-0.30.0.tar.gz",
+      "status": "verified",
+      "sha256": "dd8ff7cf90014af0c0f787eea34794ebf6415242ee1d6fa91eaba725cc441e84",
+      "bytes": 69469
+    },
+    {
+      "name": "scipy",
+      "version": "1.17.1",
+      "path": "scipy-1.17.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/7a/97/5a3609c4f8d58b039179648e62dd220f89864f56f7357f5d4f45c29eb2cc/scipy-1.17.1.tar.gz",
+      "status": "verified",
+      "sha256": "95d8e012d8cb8816c226aef832200b1d45109ed4464303e997c5b13122b297c0",
+      "bytes": 30573822
+    },
+    {
+      "name": "setuptools",
+      "version": "65.5.0",
+      "path": "setuptools-65.5.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/c5/41/247814d8b7a044717164c74080725a6c8f3d2b5fc82b34bd825b617df663/setuptools-65.5.0.tar.gz",
+      "status": "verified",
+      "sha256": "512e5536220e38146176efb833d4a62aa726b7bbff82cfbc8ba9eaa3996e0b17",
+      "bytes": 2616463
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "path": "six-1.17.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz",
+      "status": "verified",
+      "sha256": "ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81",
+      "bytes": 34031
+    },
+    {
+      "name": "sniffio",
+      "version": "1.3.1",
+      "path": "sniffio-1.3.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/a2/87/a6771e1546d97e7e041b6ae58d80074f81b7d5121207425c964ddf5cfdbd/sniffio-1.3.1.tar.gz",
+      "status": "verified",
+      "sha256": "f4324edc670a0f49750a81b895f35c3adb843cca46f0530f79fc1babb23789dc",
+      "bytes": 20372
+    },
+    {
+      "name": "tqdm",
+      "version": "4.67.1",
+      "path": "tqdm-4.67.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/a8/4b/29b4ef32e036bb34e4ab51796dd745cdba7ed47ad142a9f4a1eb8e0c744d/tqdm-4.67.1.tar.gz",
+      "status": "verified",
+      "sha256": "f8aef9c52c08c13a65f30ea34f4e5aac3fd1a34959879d7e59e63027286627f2",
+      "bytes": 169737
+    },
+    {
+      "name": "traitlets",
+      "version": "5.15.1",
+      "path": "traitlets-5.15.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/57/a9/a2584b8313b89f94869ddb3c4074617a691de1812a614d2d50e32ca5a7a6/traitlets-5.15.1.tar.gz",
+      "status": "verified",
+      "sha256": "7b1c07854fe25acb39e009bae49f11b79ff6cbb2f27999104e9110e7a6b53722",
+      "bytes": 163344
+    },
+    {
+      "name": "trimesh",
+      "version": "4.11.4",
+      "path": "trimesh-4.11.4.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/1c/6c/57a77091f42c4fe3246810c8878b1f08c65944432bb856e1b797e960c822/trimesh-4.11.4.tar.gz",
+      "status": "verified",
+      "sha256": "9c3bf253f8b21978e905c2f2fa361621415a6dfaac6b7fdaa54ef3f7f66b8c79",
+      "bytes": 836069
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "path": "typing_extensions-4.16.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/f6/cc/6253133b5bb138fc3306cebfbda2c520f545d36b5be2c7255cc528bb45d6/typing_extensions-4.16.0.tar.gz",
+      "status": "verified",
+      "sha256": "dc983d19a509c94dba722ee6abd33940f7c05a89e243c47e907eb4db6f1a43e5",
+      "bytes": 113555
+    },
+    {
+      "name": "urllib3",
+      "version": "2.5.0",
+      "path": "urllib3-2.5.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz",
+      "status": "verified",
+      "sha256": "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760",
+      "bytes": 393185
+    },
+    {
+      "name": "vedo",
+      "version": "2025.5.4",
+      "path": "vedo-2025.5.4.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/74/cb/15d78ab5930ea09664f9834645372bca4963c78510be422df812804f72de/vedo-2025.5.4.tar.gz",
+      "status": "verified",
+      "sha256": "feb585782b99f44f8d2890e689418d593bdeefc2f8c58a80aa2d9ec3a39253a4",
+      "bytes": 2714801
+    },
+    {
+      "name": "VTK",
+      "version": "9.5.1",
+      "path": "VTK-9.5.1.tar.gz",
+      "url": "https://www.vtk.org/files/release/9.5/VTK-9.5.1.tar.gz",
+      "status": "verified",
+      "sha256": "14443661c7b095d05b4e376fb3f40613f173e34fc9d4658234e9ec1d624a618f",
+      "bytes": 50183493
+    },
+    {
+      "name": "xlrd",
+      "version": "2.0.2",
+      "path": "xlrd-2.0.2.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/07/5a/377161c2d3538d1990d7af382c79f3b2372e880b65de21b01b1a2b78691e/xlrd-2.0.2.tar.gz",
+      "status": "verified",
+      "sha256": "08b5e25de58f21ce71dc7db3b3b8106c1fa776f3024c54e45b45b374e89234c9",
+      "bytes": 100167
+    }
+  ]
+}

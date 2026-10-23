@@ -1,0 +1,137 @@
+HAMLET 1.0 - SOFTWARE LICENSES
+=============================
+
+ORIGINAL HAMLET CODE
+
+Copyright (c) 2026 Jon A. Fernández-Moyano, Verónica Gracia-Ibáñez,
+Alba Roda-Sales and Carlos Gonell-Cruz.
+
+The original HAMLET code is licensed under the GNU General Public License,
+version 3 only (GPL-3.0-only). The full, unmodified license is in LICENSE.txt.
+NOTICE.txt identifies the authors and copyright holders. Universitat Jaume I
+is their affiliation. Institutional marks retain their respective rights.
+
+Repository:
+https://github.com/JonAndoniFdez/HAMLET
+
+INCLUDED SOFTWARE
+
+The following summary identifies the main components. Each component keeps
+its original license, copyright notices and third-party terms. The licenses
+listed here do not replace the original texts supplied with the package.
+
+1. Blender 4.3.2
+   License: GNU GPL version 3 or later for the distributed combination.
+   Role: separate executable for rendering, armature construction, landmark
+   labeling and preview processing.
+   Original texts: blender/copyright.txt and blender/license/.
+   Individual Blender files and bundled libraries can have other compatible
+   licenses, as recorded in those original notices.
+   https://www.blender.org/about/license/
+
+2. OpenPose hand models (CMU OpenPose 1.7.0 provenance)
+   License: CMU academic/non-profit noncommercial research license.
+   Role: the hand network definition and trained weights, loaded by OpenCV DNN.
+   Files: openpose/models/hand/pose_deploy.prototxt and
+   openpose/models/hand/pose_iter_102000.caffemodel.
+   Original terms: openpose/LICENSE. Provenance: openpose/Version.txt and
+   OPENPOSE_MODELS_NOTICE.txt.
+   These models retain CMU's terms and are not covered by HAMLET's GPLv3 grant.
+   https://github.com/CMU-Perceptual-Computing-Lab/openpose
+
+3. Qt / PySide6 / shiboken6 6.10.2
+   License: GNU LGPL version 3 for the selected LGPL-available components.
+   Role: desktop interface, bindings and supporting native Qt libraries.
+   Original texts: third_party_licenses/common/ and
+   third_party_licenses/upstream-sources/Qt-6.10.2/ and QtForPython-6.10.2/.
+   Libraries remain dynamically linked and replaceable. No commercial Qt
+   license is claimed by this distribution.
+   https://doc.qt.io/qt-6.10/licensing.html
+
+4. Qt WebEngine 6.10.2
+   License: GNU LGPL version 3 for the Qt-specific part. Chromium and its
+   dependencies retain their separate licenses, including LGPL-2.1 components.
+   Role: offline interactive 3D viewer through the embedded browser engine.
+   Original texts: third_party_licenses/QtWebEngine-credits.html and its linked
+   original notice files. The credits open locally from the license index.
+   https://doc.qt.io/qt-6.10/qtwebengine-licensing.html
+
+5. OpenCV 4.10 (opencv-python 4.10.0.84)
+   License: Apache License 2.0, with original wrapper/dependency notices.
+   Role: image processing and Caffe hand-model inference.
+   Original texts: third_party_licenses/opencv-python-4.10.0.84/.
+   The optional OpenCV FFmpeg video-I/O plugin is not needed or included.
+   https://github.com/opencv/opencv/blob/4.10.0/LICENSE
+
+6. Python 3.11.9
+   License: Python Software Foundation License and the accompanying historical
+   license texts and notices for included native components.
+   Role: embedded interpreter; a separate Python installation is not required.
+   Original text: third_party_licenses/Python/LICENSE.txt.
+   https://docs.python.org/3.11/license.html
+
+7. VTK 9.5.1
+   License: BSD 3-Clause, with accompanying third-party notices.
+   Role: rendering and interaction in the landmark label editor.
+   Original text: third_party_licenses/vtk-9.5.1/.
+   https://gitlab.kitware.com/vtk/vtk/-/blob/v9.5.1/Copyright.txt
+
+8. Vedo 2025.5.4
+   License: MIT, with separate included font notices.
+   Role: meshes and interactive landmark-label visualization over VTK.
+   Original texts: third_party_licenses/vedo-2025.5.4/.
+   https://github.com/marcomusy/vedo/blob/master/LICENSE
+
+9. Three.js r128
+   License: MIT.
+   Role: offline WebGL viewer, including OBJLoader, MTLLoader and OrbitControls.
+   Original text: assets/viewer3d/vendor/LICENSE.txt.
+   https://github.com/mrdoob/three.js/blob/r128/LICENSE
+
+10. Trimesh 4.11.4
+    License: MIT.
+    Role: mesh processing.
+    Original text: third_party_licenses/trimesh-4.11.4/.
+    https://github.com/mikedh/trimesh/blob/4.11.4/LICENSE.md
+
+11. PyInstaller 6.18.0
+    License: GPL version 2 or later with the Bootloader Exception; some files
+    are Apache-2.0 as identified in its original COPYING.txt.
+    Role: build tool and embedded executable bootloader. Users do not need to
+    install PyInstaller. Its exception permits distribution of bundled programs
+    under their own applicable licenses.
+    Original text: third_party_licenses/pyinstaller-6.18.0/.
+    https://pyinstaller.org/en/v6.18.0/license.html
+
+12. Microsoft Visual C++ Runtime
+    License: Microsoft redistribution terms.
+    Role: unmodified release runtime DLLs needed by the included Windows native
+    components. These files retain Microsoft's terms.
+    Original terms and redistribution list: third_party_licenses/Microsoft/.
+    https://learn.microsoft.com/en-us/visualstudio/releases/2022/redistribution
+
+ADDITIONAL DEPENDENCIES AND ORIGINAL NOTICES
+
+The package also contains supporting Python/native libraries, including NumPy,
+SciPy, pandas, Pillow and openpyxl. Their exact selected versions, original
+license paths and hashes are recorded in
+third_party_licenses/dependency-licenses.json. Open
+third_party_licenses/index.html for the complete local notice index.
+
+Blender and Chromium have additional internal dependencies. Their original
+notices are retained. Source notice collections can also describe unused
+platforms or build components; they do not imply that all such code ships.
+
+Source access and rebuilding: see SOURCE_CODE.md and the repository above.
+Exact dependency-source downloads and verification commands:
+docs/DEPENDENCY_SOURCES.md. Archive versions, sizes and SHA-256 digests:
+third_party_licenses/SOURCE_DOWNLOADS.json. Dated availability and integrity
+evidence: third_party_licenses/source-availability/.
+HAMLET's GPLv3 license does not relicense OpenPose models, Microsoft runtime
+files, institutional marks or any other third-party component.
+
+WARRANTY
+
+HAMLET is provided without warranty, to the extent permitted by applicable law.
+The full warranty and liability terms are those in the applicable original
+licenses. Scientific research use does not establish anatomical accuracy.

@@ -19,7 +19,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist" / "HAMLET"
-OUT = ROOT / "output" / "dependency_audit"
+OUT = ROOT / "build" / "dependency_audit"
 LEGAL_NAME = re.compile(r"(?:^|[._-])(licen[cs]e(?:ref)?|copying|copyright|notice|authors|third[-_ ]party)(?:[._-]|$)", re.I)
 
 

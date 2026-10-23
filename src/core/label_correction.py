@@ -42,7 +42,7 @@ def run_interactive_label_editor(
     ]
     if no_align_bbox:
         cmd.append("--no_align_bbox")
-    colors_csv = asset_path("scripts", "pointsColor.csv")
+    colors_csv = asset_path("data", "pointsColor.csv")
     if colors_csv.exists():
         cmd += ["--colors_csv", str(colors_csv)]
 
