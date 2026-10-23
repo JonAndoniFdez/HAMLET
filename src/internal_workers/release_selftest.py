@@ -51,7 +51,7 @@ def main():
         assert (app_root() / 'LICENSE.txt').read_bytes() == (app_root() / 'third_party_licenses/common/GPL-3.0.txt').read_bytes()
         assert (app_root() / 'CITATION.cff').is_file()
         readme = (app_root() / 'README.txt').read_text(encoding='utf-8')
-        assert 'https://github.com/JonanDelorean/AntropologicHandPrediction_Executable' in readme
+        assert 'https://github.com/JonAndoniFdez/HAMLET' in readme
         assert (app_root() / 'THIRD_PARTY_LICENSES.txt').is_file()
         about.close()
         record('Release version, author credits and GPL notice', version)
