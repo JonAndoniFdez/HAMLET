@@ -1,11 +1,11 @@
-# HAMLET 1.0
+# HAMLET
 
 **Hand Anthropometric Measurement and Landmark Extraction Tool** is a Windows
 application developed at Universitat Jaume I for hand anthropometry from
 textured 3D **flat-hand** models. It guides anatomical landmark detection,
 interactive 2D/3D review, manual adjustment and measurement export.
 
-## Download and citation
+## Download
 
 - [Windows 64-bit application, release v1.0](https://github.com/JonAndoniFdez/HAMLET/releases/tag/v1.0)
 - [Zenodo archival record: 10.5281/zenodo.23056922](https://doi.org/10.5281/zenodo.23056922)
@@ -16,6 +16,31 @@ accompanying files and folders together. The portable package includes Python,
 Blender, Qt, the OpenPose hand model files and the other required runtime
 components. No additional runtime downloads or separate Python/Blender
 installations are required. Open **Getting started** for the included user guide.
+
+## Archived release and ongoing development
+
+The [Zenodo record](https://doi.org/10.5281/zenodo.23056922) is the archival
+location for the frozen version associated with the IEEE Robotics and Automation
+Letters (RA-L) paper. Use that record and the matching
+[`v1.0` source snapshot](https://github.com/JonAndoniFdez/HAMLET/tree/v1.0)
+when reproducing the work reported in the paper. The archived package contains
+the application, user guide and required runtime components; the matching source
+snapshot and build instructions are available through the versioned GitHub links.
+
+This GitHub repository is maintained for ongoing development and future updates.
+The `main` branch and later releases may differ from the version archived for the
+paper. Identify the version used in your research.
+
+## How to cite the software
+
+**If you use HAMLET in research, please cite the associated IEEE Robotics and
+Automation Letters (RA-L) paper, using the bibliographic reference specified in
+the [Zenodo record](https://doi.org/10.5281/zenodo.23056922).**
+
+Also identify the HAMLET version used and include the DOI of the corresponding
+Zenodo software record so that readers can retrieve that exact version.
+The software metadata in [CITATION.cff](CITATION.cff) identifies HAMLET and its
+authors; it does not replace the requested citation of the associated paper.
 
 ## Run from source
 

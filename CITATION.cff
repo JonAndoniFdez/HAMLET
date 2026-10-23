@@ -1,5 +1,10 @@
 cff-version: 1.2.0
-message: "Please cite HAMLET using the author, version and repository metadata below."
+message: >-
+  If you use HAMLET in research, please cite the associated IEEE Robotics and
+  Automation Letters (RA-L) paper using the bibliographic reference specified
+  in the Zenodo archival record linked in README.md, under "How to cite the
+  software". Also identify the software version and its archival record.
+  The software metadata below does not replace the requested paper citation.
 type: software
 title: "HAMLET: Hand Anthropometric Measurement and Landmark Extraction Tool"
 version: "1.0"
